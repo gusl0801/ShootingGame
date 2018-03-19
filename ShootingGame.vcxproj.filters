@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="App">
+      <UniqueIdentifier>{783d09f4-67f0-4248-8a85-11f4a0e30e00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AppRunner">
+      <UniqueIdentifier>{6a2d38e9-57b8-4a6f-a12a-84c3177d06ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BackBuffer">
+      <UniqueIdentifier>{5a0e03f3-b108-4a3e-8938-dbb80a885c91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Main\Subs">
+      <UniqueIdentifier>{142049bd-60a6-4b9f-ad4e-180044e06697}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Subs\Resources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{2fd4f174-172c-48f8-a883-9ea1d29612cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{effda44c-362f-4712-967d-3d4c36eb6401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{ee16e140-5c68-4ca5-a1dd-9bc40d5c36ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Singleton">
+      <UniqueIdentifier>{c5cb5604-6d32-4041-9c9f-eb0ed57ce9c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Timer">
+      <UniqueIdentifier>{69acea2a-a190-4921-b08a-1e6cd65e4ba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vector">
+      <UniqueIdentifier>{3ef4654f-b157-414e-953a-d4040917db28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{9e261b98-6d11-4202-993d-95b4c0126559}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Main\Subs\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="CAppRunner.h">
+      <Filter>AppRunner</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameApp.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="CBackBuffer.h">
+      <Filter>BackBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameObject.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimation.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="CSprite.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="CMainScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CNullScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitleScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimer.h">
+      <Filter>Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Main\Subs</Filter>
+    </ClInclude>
+    <ClInclude Include="CSoundPlayer.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CAppRunner.cpp">
+      <Filter>AppRunner</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameApp.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="CBackBuffer.cpp">
+      <Filter>BackBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameObject.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimation.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="CSprite.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="CMainScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CNullScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitleScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimer.cpp">
+      <Filter>Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Main\Subs</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Main\Subs</Filter>
+    </ClCompile>
+    <ClCompile Include="CSoundPlayer.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ShootingGame.rc">
+      <Filter>Main\Subs\Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Main\Subs\Resources</Filter>
+    </Image>
+    <Image Include="ShootingGame.ico">
+      <Filter>Main\Subs\Resources</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
