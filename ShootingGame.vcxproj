@@ -83,6 +83,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>../inc;$(IncludePath)</IncludePath>
+    <LibraryPath>../lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -149,7 +151,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CAnimation.h" />
+    <ClInclude Include="CBackground.h" />
+    <ClInclude Include="CSprite.h" />
     <ClInclude Include="CAppRunner.h" />
     <ClInclude Include="CBackBuffer.h" />
     <ClInclude Include="CGameApp.h" />
@@ -158,7 +161,8 @@
     <ClInclude Include="CNullScene.h" />
     <ClInclude Include="CScene.h" />
     <ClInclude Include="CSoundPlayer.h" />
-    <ClInclude Include="CSprite.h" />
+    <ClInclude Include="CRenderer.h" />
+    <ClInclude Include="CTestScene.h" />
     <ClInclude Include="CTimer.h" />
     <ClInclude Include="CTitleScene.h" />
     <ClInclude Include="Resource.h" />
@@ -169,7 +173,8 @@
     <ClInclude Include="Vector2D.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CAnimation.cpp" />
+    <ClCompile Include="CBackground.cpp" />
+    <ClCompile Include="CSprite.cpp" />
     <ClCompile Include="CAppRunner.cpp" />
     <ClCompile Include="CBackBuffer.cpp" />
     <ClCompile Include="CGameApp.cpp" />
@@ -178,7 +183,8 @@
     <ClCompile Include="CNullScene.cpp" />
     <ClCompile Include="CScene.cpp" />
     <ClCompile Include="CSoundPlayer.cpp" />
-    <ClCompile Include="CSprite.cpp" />
+    <ClCompile Include="CRenderer.cpp" />
+    <ClCompile Include="CTestScene.cpp" />
     <ClCompile Include="CTimer.cpp" />
     <ClCompile Include="CTitleScene.cpp" />
     <ClCompile Include="Main.cpp" />

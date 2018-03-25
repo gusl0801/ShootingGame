@@ -1,6 +1,6 @@
 #pragma once
 
-#include "CAnimation.h"
+#include "CSprite.h"
 #include "Vector2D.h"
 
 class CState;
@@ -30,6 +30,6 @@ private:
 	CState *m_curState;
 	queue<CState*> m_stateQueue;
 
-	CAnimation *m_renderer;
+	CSprite *m_renderer;
 };
 

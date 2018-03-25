@@ -6,11 +6,11 @@
 기존에 작성해둔 코드를 그대로 가져왔기에 추후 수정이 필요합니다.
 */
 
-#pragma comment (lib, "lib/fmodex_vc.lib")
+#pragma comment (lib, "fmod/lib/fmodex_vc.lib")
 
-#include "inc/fmod.h"
-#include "inc/fmod.hpp"
-#include "inc/fmod_errors.h"
+#include "fmod/inc/fmod.h"
+#include "fmod/inc/fmod.hpp"
+#include "fmod/inc/fmod_errors.h"
 
 typedef enum
 {

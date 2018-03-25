@@ -9,11 +9,11 @@ enum class AnimationState
 	Move = 21,
 };
 
-class CAnimation : public CSprite
+class CSprite
 {
 public:
-	CAnimation();
-	~CAnimation();
+	CSprite();
+	~CSprite();
 
 	void ChangeState(AnimationState state) { m_state = state; }
 

@@ -13,7 +13,7 @@
 class CInput;
 class CBackBuffer;
 
-using Viewport = RECT;
+
 
 class CGameApp : public Singleton<CGameApp>
 {

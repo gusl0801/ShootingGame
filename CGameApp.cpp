@@ -18,12 +18,6 @@ CGameApp::CGameApp()
 
 	m_hInst = nullptr;
 	m_hWnd = nullptr;
-
-	LoadString(m_hInst, IDS_APP_TITLE, m_captionTitle, TITLE_LENGTH);
-
-	lstrcat(m_captionTitle, TEXT(" ("));
-	m_titleLength = lstrlen(m_captionTitle);
-	SetWindowText(m_hWnd, m_captionTitle);
 }
 
 CGameApp::~CGameApp()
@@ -214,6 +208,12 @@ void CGameApp::BuildObjects()
 {
  	GetClientRect(m_hWnd, &m_viewport);
 	m_backBuffer = new CBackBuffer(m_hWnd, m_viewport);
+
+	LoadString(m_hInst, IDS_APP_TITLE, m_captionTitle, TITLE_LENGTH);
+
+	lstrcat(m_captionTitle, TEXT(" ("));
+	m_titleLength = lstrlen(m_captionTitle);
+	SetWindowText(m_hWnd, m_captionTitle);
 
 	m_currentScene = CScene::NewScene<CTitleScene>();
 }

@@ -8,8 +8,7 @@
 출력하는 텍스트의 위치를 위에서 아래로 움직이도록 합니다.
 */
 
-class CMainScene :
-	public CScene
+class CMainScene : public CScene
 {
 public:
 	CMainScene();
@@ -22,12 +21,5 @@ public:
 	virtual LRESULT CALLBACK ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
 private:
-	void DrawBackground(HDC hdc);
-	void Scrolling();
-
-	CImage m_background;
-	int m_bgXPos;
-	int m_bgYPos;
-	int m_bgGap;
 };
 

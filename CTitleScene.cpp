@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CTitleScene.h"
+#include "CTestScene.h"
 #include "CGameApp.h"
 #include "CMainScene.h"
 
@@ -68,7 +69,7 @@ LRESULT CTitleScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPAR
 	{
 	case WM_KEYDOWN:
 		if (wParam == VK_SPACE)
-			CGameApp::Get()->ChangeScene(CScene::NewScene<CMainScene>());
+			CGameApp::Get()->ChangeScene(CScene::NewScene<CTestScene>());
 		break;
 
 	default:
