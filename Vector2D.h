@@ -51,3 +51,4 @@ public:
 using Vector2i = Vector2D<int>;
 using Vector2d = Vector2D<double>;
 using Vector2f = Vector2D<float>;
+using Point2D = Vector2D<int>;
