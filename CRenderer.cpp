@@ -16,27 +16,27 @@ void CRenderer::Update()
 {
 }
 
-void CRenderer::BitBlt(HDC hdc)
+void CRenderer::BitBlt(HDC hdc, const Point2D& position)
 {
-	m_image.BitBlt(hdc, 0, 0, m_image.GetWidth(), m_image.GetHeight(),
+	m_image.BitBlt(hdc, position.x, position.y, m_image.GetWidth(), m_image.GetHeight(),
 		m_image.GetWidth(), m_image.GetHeight(), SRCCOPY);
 }
 
-void CRenderer::StretchBlt(HDC hdc)
+void CRenderer::StretchBlt(HDC hdc, const Point2D& position)
 {
 	Viewport viewport = CGameApp::Get()->GetViewport();
 
-	m_image.StretchBlt(hdc, 0, 0, viewport.right, viewport.bottom,
+	m_image.StretchBlt(hdc, position.x, position.y, viewport.right, viewport.bottom,
 		0, 0, m_image.GetWidth(), m_image.GetHeight(), SRCCOPY);
 }
 
-void CRenderer::StretchBlt(HDC hdc, double xRate, double yRate)
+void CRenderer::StretchBlt(HDC hdc, const Point2D& position, double xRate, double yRate)
 {
-	m_image.StretchBlt(hdc, 0, 0, m_image.GetWidth() * xRate, m_image.GetHeight() * yRate,
+	m_image.StretchBlt(hdc, position.x, position.y, m_image.GetWidth() * xRate, m_image.GetHeight() * yRate,
 		0, 0, m_image.GetWidth(), m_image.GetHeight(), SRCCOPY);
 }
 
-void CRenderer::AlphaBlend(HDC hdc, DrawFunc drawFn)
+void CRenderer::AlphaBlend(HDC hdc, const Point2D& position, DrawFunc drawFn)
 {
 	//COLORREF removeColor = RGB(255, 0, 255);		//지울 색상
 	////static int alpha = 0;				//투명도

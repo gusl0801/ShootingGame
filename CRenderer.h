@@ -8,23 +8,23 @@ class CRenderer
 {
 public:
 	CRenderer();
-	virtual ~CRenderer();
+	~CRenderer();
 
 	HRESULT LoadImage(LPCTSTR szAddress) { return m_image.Load(szAddress); }
 
 	void Update();
 
-	virtual void BitBlt(HDC hdc);
+	void BitBlt(HDC hdc, const Point2D& position);
 
 	// 스크린 영역에 맞춰서 이미지를 확장해 렌더링합니다.
-	virtual void StretchBlt(HDC hdc);
+	void StretchBlt(HDC hdc, const Point2D& position);
 	
 	// 비율에 맞게 이미지를 확장해 렌더링합니다.
-	virtual void StretchBlt(HDC hdc, double xRate, double yRate);
+	void StretchBlt(HDC hdc, const Point2D& position, double xRate, double yRate);
 
-	virtual void AlphaBlend(HDC hdc, DrawFunc drawFn);
+	void AlphaBlend(HDC hdc, const Point2D& position, DrawFunc drawFn);
 
-	static void AlphaBlend(HDC hdc) {}
+	void AlphaBlend(HDC hdc, const Point2D& position) {}
 
 private:
 	CImage m_image;
