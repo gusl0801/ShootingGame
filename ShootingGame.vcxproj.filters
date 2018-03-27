@@ -116,6 +116,9 @@
     <ClInclude Include="Main.h">
       <Filter>Main\Subs</Filter>
     </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>Object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAppRunner.cpp">
@@ -165,6 +168,9 @@
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

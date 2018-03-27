@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CBackground.h" />
+    <ClInclude Include="CPlayer.h" />
     <ClInclude Include="CSprite.h" />
     <ClInclude Include="CAppRunner.h" />
     <ClInclude Include="CBackBuffer.h" />
@@ -174,6 +175,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CBackground.cpp" />
+    <ClCompile Include="CPlayer.cpp" />
     <ClCompile Include="CSprite.cpp" />
     <ClCompile Include="CAppRunner.cpp" />
     <ClCompile Include="CBackBuffer.cpp" />
