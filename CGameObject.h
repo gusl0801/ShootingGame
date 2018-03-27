@@ -24,12 +24,12 @@ public:
 
 	void ChangeSprite(AnimationState state) { m_renderer->ChangeState(state); }
 
-private:
+protected:
+	CSprite * m_renderer;
+
 	Vector2i m_position;
 
 	CState *m_curState;
 	queue<CState*> m_stateQueue;
-
-	CSprite *m_renderer;
 };
 
