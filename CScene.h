@@ -37,4 +37,7 @@ public:
 protected:
 	// NewScene함수로만 Scene을 생성하도록 강제합니다.
 	CScene() {}
+
+	virtual void BuildObjects() = 0;
+	virtual void ReleaseObjects() = 0;
 };

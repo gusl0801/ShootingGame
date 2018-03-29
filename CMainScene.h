@@ -21,5 +21,7 @@ public:
 	virtual LRESULT CALLBACK ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
 private:
+	virtual void BuildObjects() {}
+	virtual void ReleaseObjects() {}
 };
 

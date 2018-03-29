@@ -19,5 +19,9 @@ public:
 
 	virtual LRESULT CALLBACK ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	{ return DefWindowProc(hWnd, message, wParam, lParam); }
+
+private:
+	virtual void BuildObjects() {}
+	virtual void ReleaseObjects() {}
 };
 
