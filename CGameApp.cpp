@@ -5,7 +5,7 @@
 #include "CTitleScene.h"
 #include "CNullScene.h"
 
-#define MS_PER_UPDATE 1 / 60.0f // 0.016f 일반적인 모니터는 1초에 60번 화면을 갱신
+#define MS_PER_UPDATE 1 / 80.0f // 0.016f 일반적인 모니터는 1초에 60번 화면을 갱신
 #define MAX_LOOP_COUNT 50 // update따라잡기는 한번에 최대 50번 까지만 가능하도록 설정
 #define TITLE_LENGTH	50	// 타이틀 문자열의 길이를 최대 50자로 설정
 
@@ -130,18 +130,26 @@ BOOL CGameApp::InitInstance(HINSTANCE hInstance, int nCmdShow)
 
 void CGameApp::FrameAdvance()
 {
-	int loopCount = 0;
+	m_timer.UpdateTimeElpased();	// 이전 함수 호출부터 현재 함수 호출까지 경과한 시간을 계산합니다.
 
-	m_timer.Tick();
-
-	while (m_timer.GetTimeLag() > MS_PER_UPDATE && loopCount++ < MAX_LOOP_COUNT)
+	if (m_timer.GetTimeElapsed() > MS_PER_UPDATE)	// 지정된 시간이 경과한 경우
 	{
-		ProcessInput(nullptr);
+		m_timer.Tick();				// 시간을 업데이트 합니다.
 
-		Update();
+		// 게임 시간이 늦어진 경우 늦은 시간을 따라잡을 때 까지
+		// 반복해서 업데이트 시킵니다.
+		for (int i = 0; i < MAX_LOOP_COUNT && m_timer.GetTimeLag() > MS_PER_UPDATE; ++i)
+		{
+			ProcessInput(nullptr);
 
-		m_timer.UpdateTimeLag(-MS_PER_UPDATE);
+			Update();
+
+			m_timer.UpdateTimeLag(-MS_PER_UPDATE);
+		}
 	}
+	else // 지정된 시간이 경과하지 않은 경우 업데이트를 생략합니다.
+		return;
+	
 	Draw();
 
 	float fps = m_timer.GetFrameRate();

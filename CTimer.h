@@ -14,17 +14,18 @@ public:
 	virtual ~CTimer();
 
 	// 이전 함수 호출 시간과 현재 함수 호출 시간 갱신합니다.
-	virtual void Tick() {
+	void Tick() {
 		m_curTime = chrono::system_clock::now(); 
 		m_timeElapsed = m_curTime - m_prevTime;
-		m_prevTime = m_curTime;
+		m_prevTime = m_curTime; 
 		m_timeLag += m_timeElapsed.count();
 	}
-
+	
 	// 이전 함수 호출 시간과 현재 함수 호출 시간 사이의 차이를 계산하여 반환합니다.
 	double GetTimeLag() const { return m_timeLag; }					// update에서 변화함
 	double GetTimeElapsed() const { return m_timeElapsed.count(); }	// update에서 변화안함
-
+																	// 이전 함수 호출 시간과 현재 함수 호출 시간을 비교합니다.
+	void UpdateTimeElpased() { m_timeElapsed = chrono::system_clock::now() - m_prevTime; }
 	void UpdateTimeLag(double timeLag) { m_timeLag += timeLag; }
 
 private:
