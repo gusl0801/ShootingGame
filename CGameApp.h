@@ -42,7 +42,7 @@ private:
 
 	void Update();
 	void Draw();
-	void ProcessInput(CInput *input);
+	void ProcessInput();
 
 	void ReleaseObjects();
 

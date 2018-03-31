@@ -5,8 +5,8 @@
 CPlayer::CPlayer()
 	:CGameObject()
 {
-	m_position.x = 100;
-	m_position.y = 100;
+	m_position.x = CLIENT_WIDTH * 0.42f;
+	m_position.y = CLIENT_HEIGHT * 0.45f;
 
 	m_renderer->Load(TEXT("resource/characters/sprite_test.png"), {6,8});
 }

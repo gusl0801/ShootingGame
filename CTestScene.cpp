@@ -29,9 +29,12 @@ void CTestScene::Draw(HDC hdc)
 	m_player->Draw(hdc);
 }
 
-void CTestScene::ProcessInput(CInput * input)
-{
-
+void CTestScene::ProcessInput()
+{	
+	if (IS_KEY_DOWN(VK_LEFT))  { m_player->Test(-1,0);}
+	if (IS_KEY_DOWN(VK_RIGHT)) { m_player->Test(1,0); }
+	if (IS_KEY_DOWN(VK_UP))    { m_player->Test(0,-1);}
+	if (IS_KEY_DOWN(VK_DOWN))  { m_player->Test(0,1); }
 }
 
 LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

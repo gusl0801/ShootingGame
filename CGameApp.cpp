@@ -140,7 +140,7 @@ void CGameApp::FrameAdvance()
 		// 반복해서 업데이트 시킵니다.
 		for (int i = 0; i < MAX_LOOP_COUNT && m_timer.GetTimeLag() > MS_PER_UPDATE; ++i)
 		{
-			ProcessInput(nullptr);
+			ProcessInput();
 
 			Update();
 
@@ -175,8 +175,9 @@ void CGameApp::Draw()
 	m_backBuffer->Present();
 }
 
-void CGameApp::ProcessInput(CInput * input)
+void CGameApp::ProcessInput()
 {
+	m_currentScene->ProcessInput();
 }
 
 void CGameApp::ShutDown()

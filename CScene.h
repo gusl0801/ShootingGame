@@ -21,7 +21,7 @@ public:
 	
 	virtual void Update() = 0;
 	virtual void Draw(HDC hdc) = 0;
-	virtual void ProcessInput(CInput *input) = 0;
+	virtual void ProcessInput() = 0;
 	
 	virtual LRESULT CALLBACK ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) = 0;
 	

@@ -60,7 +60,7 @@ void CTitleScene::Draw(HDC hdc)
 	//TextOut(hdc, m_textPosX, m_textPosY, m_text, m_textLen);
 }
 
-void CTitleScene::ProcessInput(CInput * input)
+void CTitleScene::ProcessInput()
 {
 }
 

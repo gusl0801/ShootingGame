@@ -12,5 +12,7 @@ public:
 	virtual void ProcessCommand() {}
 
 	virtual bool IsDelete() { return false; }
+
+	void Test(int x, int y) { m_position.x += x; m_position.y += y; }
 };
 

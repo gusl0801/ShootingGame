@@ -21,7 +21,7 @@ void CMainScene::Draw(HDC hdc)
 {
 }
 
-void CMainScene::ProcessInput(CInput * input)
+void CMainScene::ProcessInput()
 {
 
 }
