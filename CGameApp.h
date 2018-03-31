@@ -34,7 +34,7 @@ public:
 	
 	Viewport GetViewport() const { return m_viewport; }
 
-	void ChangeScene(CScene *scene) { if (scene == nullptr) return; m_currentScene = scene; }
+	void ChangeScene(CScene *scene);
 
 private:
 	static LRESULT CALLBACK StaticWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);

@@ -186,6 +186,14 @@ void CGameApp::ShutDown()
 	if (m_hWnd) DestroyWindow(m_hWnd);
 }
 
+void CGameApp::ChangeScene(CScene * scene)
+{ 
+	if (scene == nullptr) return; 
+	
+	SAFE_DELETE(m_currentScene);  
+	m_currentScene = scene; 
+}
+
 LRESULT CGameApp::StaticWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	// return CGameApp::Get()->ProcessWndProc(hWnd, message, wParam, lParam);
