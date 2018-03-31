@@ -16,27 +16,52 @@ void CRenderer::Update()
 {
 }
 
-void CRenderer::BitBlt(HDC hdc, const Point2D& position)
+void CRenderer::BitBlt(HDC hdc, const Point2D& screenPos)
 {
-	m_image.BitBlt(hdc, position.x, position.y, m_image.GetWidth(), m_image.GetHeight(),
+	m_image.BitBlt(hdc, screenPos.x, screenPos.y, m_image.GetWidth(), m_image.GetHeight(),
 		m_image.GetWidth(), m_image.GetHeight(), SRCCOPY);
 }
 
-void CRenderer::StretchBlt(HDC hdc, const Point2D& position)
+void CRenderer::BitBltEx(HDC hdc, const Point2D& screenPos, const Point2D& size)
+{
+	m_image.BitBlt(hdc, screenPos.x, screenPos.y, size.x, size.y, size.x, size.y, SRCCOPY);
+}
+
+void CRenderer::StretchBltEx(HDC hdc, const Point2D& screenPos)
 {
 	Viewport viewport = CGameApp::Get()->GetViewport();
 
-	m_image.StretchBlt(hdc, position.x, position.y, viewport.right, viewport.bottom,
+	m_image.StretchBlt(hdc, screenPos.x, screenPos.y, viewport.right, viewport.bottom,
 		0, 0, m_image.GetWidth(), m_image.GetHeight(), SRCCOPY);
 }
 
-void CRenderer::StretchBlt(HDC hdc, const Point2D& position, double xRate, double yRate)
+void CRenderer::StretchBltEx(HDC hdc, const Point2D& screenPos, const Point2D& imagePos, const Point2D& size)
 {
-	m_image.StretchBlt(hdc, position.x, position.y, m_image.GetWidth() * xRate, m_image.GetHeight() * yRate,
-		0, 0, m_image.GetWidth(), m_image.GetHeight(), SRCCOPY);
+	Viewport viewport = CGameApp::Get()->GetViewport();
+
+	m_image.StretchBlt(hdc, screenPos.x, screenPos.y, size.x, size.y,
+		imagePos.x * size.x, imagePos.y * size.y, size.x, size.y, SRCCOPY);
 }
 
-void CRenderer::AlphaBlend(HDC hdc, const Point2D& position, DrawFunc drawFn)
+void CRenderer::StretchBltEx(HDC hdc, const Point2D& screenPos, const Point2D& imagePos, const Point2D& size, double xRate, double yRate)
+{
+	m_image.StretchBlt(hdc, screenPos.x, screenPos.y, m_image.GetWidth() * xRate, m_image.GetHeight() * yRate,
+		imagePos.x * size.x, imagePos.y * size.y, size.x, size.y, SRCCOPY);
+}
+
+void CRenderer::TransparentBlt(HDC hdc, const Point2D & screenPos, COLORREF color)
+{
+	m_image.TransparentBlt(hdc, screenPos.x, screenPos.y, m_image.GetWidth(), m_image.GetHeight(),
+		0, 0, m_image.GetWidth(), m_image.GetHeight(), color);
+}
+
+void CRenderer::TransparentBltEx(HDC hdc, const Point2D& screenPos, const Point2D& imagePos, const Point2D & size, COLORREF color)
+{
+	m_image.TransparentBlt(hdc, screenPos.x, screenPos.y, size.x, size.y,
+		imagePos.x * size.x, imagePos.y * size.y, size.x, size.y, color);
+}
+
+void CRenderer::AlphaBlend(HDC hdc, const Point2D& screenPos, DrawFunc drawFn)
 {
 	//COLORREF removeColor = RGB(255, 0, 255);		//지울 색상
 	////static int alpha = 0;				//투명도
