@@ -79,7 +79,7 @@ void CSoundManager::PlayEffect(Sound_Name varName)
 	}
 }
 
-void CSoundManager::Stop()
+void CSoundManager::StopBGM()
 {
 	FMOD_Channel_Stop(m_pChannel[SOUND_BGM]);
 }

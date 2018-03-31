@@ -1,5 +1,6 @@
 #pragma once
 
+#include "CSoundPlayer.h"
 /*
 작성일 : 2018-03-13
 설명 : 프로그램 논리에 의한 작업공간이 될 여러 Scene들의 상위 클래스입니다.
@@ -40,4 +41,6 @@ protected:
 
 	virtual void BuildObjects() = 0;
 	virtual void ReleaseObjects() = 0;
+
+	CSoundManager *m_soundPlayer;
 };

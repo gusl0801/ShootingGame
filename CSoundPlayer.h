@@ -41,7 +41,7 @@ public:		//사운드 재생
 	void PlayBgm(Sound_Name varName);		//배경음악을 재생합니다.
 	void PlayEffect(Sound_Name varName);	//효과음을 재생합니다.
 
-	void Stop();		//사운드 재생을 중지합니다.
+	void StopBGM();		//사운드 재생을 중지합니다.
 	void SetVolume(float volume);	//사운드의 크기를 조절합니다.
 public:		//기타
 	FMOD_SOUND * FindSound(Sound_Name key);	//해당 키 값이 이미 등록 되어 있는지를 찾습니다.

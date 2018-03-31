@@ -21,8 +21,9 @@ CTitleScene::CTitleScene()
 	
 	m_background.Load(TEXT("resource/backgrounds/sample_background.bmp"));
 	
-	m_soundPlayer.AddStream("resource/sounds/bgm/title_sample.mp3", Sound_Name::BGM_TITLE);
-	m_soundPlayer.PlayBgm(Sound_Name::BGM_TITLE);
+	m_soundPlayer = new CSoundManager();
+	m_soundPlayer->AddStream("resource/sounds/bgm/title_sample.mp3", Sound_Name::BGM_TITLE);
+	m_soundPlayer->PlayBgm(Sound_Name::BGM_TITLE);
 }
 
 
@@ -34,7 +35,7 @@ void CTitleScene::Update()
 {
 	Viewport viewport = CGameApp::Get()->GetViewport();
 	
-	m_soundPlayer.OnUpdate();
+	m_soundPlayer->OnUpdate();
 
 	if (m_isMoveRight)
 	{

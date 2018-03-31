@@ -37,6 +37,5 @@ private:
 	USHORT m_textLen;
 
 	CImage m_background;
-	CSoundManager m_soundPlayer;
 };
 
