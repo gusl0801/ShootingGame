@@ -49,7 +49,5 @@ private:
 	short m_animationPerSecond;		// 1초에 몇 회 애니메이션을 진행할 것 인지
 	short m_animationDelay = 0;		// 애니메이션 지연 횟수
 	short m_animationCount = 0;		// 애니메이션 업데이트를 위해 증가 시킨 횟수
-
-	CImage m_image;
 };
 

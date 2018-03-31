@@ -4,7 +4,7 @@
 
 CSprite::CSprite()
 {
-	m_index = 0;
+	m_index = -1;
 
 	const int SPRITE_NUM = 4;
 	m_animationPerSecond = 4;
@@ -19,19 +19,19 @@ CSprite::~CSprite()
 
 void CSprite::Load(LPCTSTR szAddress)
 {
+	++m_index;
 	m_renderers.emplace_back(new CRenderer());
-	m_renderers[m_index++]->Load(szAddress);
+	m_renderers[m_index]->Load(szAddress);
 }
 
 void CSprite::Load(LPCTSTR szAddress, Point2D partition)
 {
-	m_image.Load(szAddress);
 	Load(szAddress);
 
 	m_partition = partition;
 	
-	m_imageSizes.emplace_back(m_renderers[0]->GetWidth() / partition.x, m_renderers[0]->GetHeight() / partition.y);
-	cout << m_imageSizes[0].x << ", " << m_imageSizes[0].y << endl;
+	m_imageSizes.emplace_back(m_renderers[m_index]->GetWidth() / partition.x, m_renderers[m_index]->GetHeight() / partition.y);
+	cout << m_imageSizes[m_index].x << ", " << m_imageSizes[m_index].y << endl;
 }
 
 void CSprite::Update()
@@ -52,8 +52,7 @@ void CSprite::Update()
 
 void CSprite::Draw(HDC hdc, const Point2D & position)
 {
-	m_image.TransparentBlt(hdc, position.x, position.y, m_imageSizes[0].x, m_imageSizes[0].y,
-		m_imageSizes[0].x * m_outputPosition.x, 0, m_imageSizes[0].x, m_imageSizes[0].y, RGB(255,255,255));
+	m_renderers[0]->TransparentBltEx(hdc, position, m_outputPosition, m_imageSizes[0], RGB(255, 255, 255));
 }
 
 void CSprite::AlphaBlend(HDC hdc, const Point2D & position, DrawFunc drawFn)
