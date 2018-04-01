@@ -54,6 +54,15 @@
     <Filter Include="Scene\Test">
       <UniqueIdentifier>{6d0c2b2d-5f2c-460b-a677-06bf3098aaa7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="IOManager">
+      <UniqueIdentifier>{74f2f654-5916-4a8b-8012-89071a8dcb62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IOManager\FileStream">
+      <UniqueIdentifier>{e9e58a48-b489-4911-9355-9b88d3a7cc4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IOManager\JSON">
+      <UniqueIdentifier>{1b5c337c-790b-4a87-abbb-543e210a87f6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -119,6 +128,15 @@
     <ClInclude Include="CPlayer.h">
       <Filter>Object</Filter>
     </ClInclude>
+    <ClInclude Include="CIOManager.h">
+      <Filter>IOManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CJson.h">
+      <Filter>IOManager\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="CFileStream.h">
+      <Filter>IOManager\FileStream</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAppRunner.cpp">
@@ -171,6 +189,15 @@
     </ClCompile>
     <ClCompile Include="CPlayer.cpp">
       <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CIOManager.cpp">
+      <Filter>IOManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CJson.cpp">
+      <Filter>IOManager\JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="CFileStream.cpp">
+      <Filter>IOManager\FileStream</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
