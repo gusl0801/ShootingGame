@@ -2,8 +2,10 @@
 #include "CScene.h"
 
 #include "CBackground.h"
+#include "CObjectManager.h"
 
 class CPlayer;
+class CBullet;
 
 class CTestScene : public CScene
 {
@@ -24,5 +26,7 @@ private:
 	CBackground m_background;
 
 	CPlayer *m_player;
+
+	CObjectManager m_bullets;
 };
 

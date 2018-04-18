@@ -2,6 +2,7 @@
 #include "CTestScene.h"
 #include "CGameApp.h"
 #include "CPlayer.h"
+#include "CBullet.h"
 
 CTestScene::CTestScene()
 {
@@ -21,12 +22,17 @@ void CTestScene::Update()
 {
 	m_background.Update();
 	m_player->Update();
+
+	m_bullets.Update();
+	m_bullets.CheckDelete();
 }
 
 void CTestScene::Draw(HDC hdc)
 {
 	m_background.Draw(hdc);
 	m_player->Draw(hdc);
+
+	m_bullets.Draw(hdc);
 }
 
 void CTestScene::ProcessInput()
@@ -39,7 +45,16 @@ void CTestScene::ProcessInput()
 
 LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-	return DefWindowProc(hWnd, message, wParam, lParam);
+	switch (message)
+	{
+	case WM_KEYDOWN:
+		m_bullets.AddObject(new CBullet());
+		break;
+
+	default:
+		return DefWindowProc(hWnd, message, wParam, lParam);
+	}
+	return 0;
 }
 
 void CTestScene::BuildObjects()

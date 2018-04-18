@@ -63,6 +63,12 @@
     <Filter Include="IOManager\JSON">
       <UniqueIdentifier>{1b5c337c-790b-4a87-abbb-543e210a87f6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Bullet">
+      <UniqueIdentifier>{b286871a-7f17-4d6c-9033-08d6840a3f15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\ObjectManager">
+      <UniqueIdentifier>{8c19c938-1cfa-4ea6-9675-1ba3af031604}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -137,6 +143,12 @@
     <ClInclude Include="CFileStream.h">
       <Filter>IOManager\FileStream</Filter>
     </ClInclude>
+    <ClInclude Include="CBullet.h">
+      <Filter>Object\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjectManager.h">
+      <Filter>Object\ObjectManager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAppRunner.cpp">
@@ -198,6 +210,12 @@
     </ClCompile>
     <ClCompile Include="CFileStream.cpp">
       <Filter>IOManager\FileStream</Filter>
+    </ClCompile>
+    <ClCompile Include="CBullet.cpp">
+      <Filter>Object\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjectManager.cpp">
+      <Filter>Object\ObjectManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
