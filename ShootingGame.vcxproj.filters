@@ -69,6 +69,18 @@
     <Filter Include="Object\ObjectManager">
       <UniqueIdentifier>{8c19c938-1cfa-4ea6-9675-1ba3af031604}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Bullet\N-Way">
+      <UniqueIdentifier>{605129c1-4b9b-42bd-b936-4a25b732cd45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Bullet\Drop">
+      <UniqueIdentifier>{34700f67-ab61-47b8-b494-0e3ec2266e47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Bullet\Split">
+      <UniqueIdentifier>{a5daf5f8-e7e6-47ac-a4c9-886d125937b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Bullet\Circular">
+      <UniqueIdentifier>{a4ca6d44-c2b8-4979-b554-5de48a738afa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -149,6 +161,18 @@
     <ClInclude Include="CObjectManager.h">
       <Filter>Object\ObjectManager</Filter>
     </ClInclude>
+    <ClInclude Include="CSplitBullet.h">
+      <Filter>Object\Bullet\Split</Filter>
+    </ClInclude>
+    <ClInclude Include="CDropBullet.h">
+      <Filter>Object\Bullet\Drop</Filter>
+    </ClInclude>
+    <ClInclude Include="CNWayBullet.h">
+      <Filter>Object\Bullet\N-Way</Filter>
+    </ClInclude>
+    <ClInclude Include="CCircularBullet.h">
+      <Filter>Object\Bullet\Circular</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAppRunner.cpp">
@@ -216,6 +240,18 @@
     </ClCompile>
     <ClCompile Include="CObjectManager.cpp">
       <Filter>Object\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CSplitBullet.cpp">
+      <Filter>Object\Bullet\Split</Filter>
+    </ClCompile>
+    <ClCompile Include="CDropBullet.cpp">
+      <Filter>Object\Bullet\Drop</Filter>
+    </ClCompile>
+    <ClCompile Include="CNWayBullet.cpp">
+      <Filter>Object\Bullet\N-Way</Filter>
+    </ClCompile>
+    <ClCompile Include="CCircularBullet.cpp">
+      <Filter>Object\Bullet\Circular</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

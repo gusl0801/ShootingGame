@@ -23,5 +23,6 @@ void CPlayer::Update()
 
 void CPlayer::Draw(HDC hdc)
 {
-	m_renderer->Draw(hdc, m_position);
+	Point2D position = { (int)m_position.x, (int)m_position.y };
+	m_renderer->Draw(hdc, position);
 }

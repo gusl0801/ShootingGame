@@ -3,6 +3,10 @@
 #include "CGameApp.h"
 #include "CPlayer.h"
 #include "CBullet.h"
+#include "CNWayBullet.h"
+#include "CSplitBullet.h"
+#include "CDropBullet.h"
+#include "CCircularBullet.h"
 
 CTestScene::CTestScene()
 {
@@ -45,12 +49,19 @@ void CTestScene::ProcessInput()
 
 LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
+	Vector2d pos = { (double)(rand() % CLIENT_WIDTH),50 };
+	//Vector2d pos = { m_player->GetPosition().x, 50 };
+
 	switch (message)
 	{
 	case WM_KEYDOWN:
-		m_bullets.AddObject(new CBullet());
+		if (wParam == VK_SPACE)
+			m_bullets.AddObject(new CBullet());
+		else if (wParam == 'n' || wParam == 'N')
+			m_bullets.AddObject(new CNWayBullet(pos, m_player->GetPosition(), 7));
+		else if (wParam == 'c' || wParam == 'C')
+			m_bullets.AddObject(new CCircularBullet(pos, 50, m_player->GetPosition(), 10));
 		break;
-
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);
 	}

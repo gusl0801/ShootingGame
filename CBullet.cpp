@@ -7,6 +7,15 @@ CBullet::CBullet()
 	m_position.x = rand() % CLIENT_WIDTH;
 
 	m_position.y = 50;
+	m_direction.x = 0;
+	m_direction.y = 1;
+	m_direction.Normalize();
+}
+
+CBullet::CBullet(const Vector2d &position, const Vector2d &direction)
+{
+	m_position = position;
+	m_direction = direction;
 }
 
 
@@ -33,4 +42,10 @@ void CBullet::Draw(HDC hdc)
 
 	SelectObject(hdc, oldBrush);
 	DeleteObject(hBrush);
+}
+
+void CBullet::Rotate(const Vector2d & center, int angle, int radius)
+{
+	m_position.x = center.x + radius * cos(angle);
+	m_position.y = center.y + radius * sin(angle);
 }

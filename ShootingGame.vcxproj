@@ -153,11 +153,15 @@
   <ItemGroup>
     <ClInclude Include="CBackground.h" />
     <ClInclude Include="CBullet.h" />
+    <ClInclude Include="CCircularBullet.h" />
+    <ClInclude Include="CDropBullet.h" />
     <ClInclude Include="CFileStream.h" />
     <ClInclude Include="CJson.h" />
     <ClInclude Include="CIOManager.h" />
+    <ClInclude Include="CNWayBullet.h" />
     <ClInclude Include="CObjectManager.h" />
     <ClInclude Include="CPlayer.h" />
+    <ClInclude Include="CSplitBullet.h" />
     <ClInclude Include="CSprite.h" />
     <ClInclude Include="CAppRunner.h" />
     <ClInclude Include="CBackBuffer.h" />
@@ -181,11 +185,15 @@
   <ItemGroup>
     <ClCompile Include="CBackground.cpp" />
     <ClCompile Include="CBullet.cpp" />
+    <ClCompile Include="CCircularBullet.cpp" />
+    <ClCompile Include="CDropBullet.cpp" />
     <ClCompile Include="CFileStream.cpp" />
     <ClCompile Include="CJson.cpp" />
     <ClCompile Include="CIOManager.cpp" />
+    <ClCompile Include="CNWayBullet.cpp" />
     <ClCompile Include="CObjectManager.cpp" />
     <ClCompile Include="CPlayer.cpp" />
+    <ClCompile Include="CSplitBullet.cpp" />
     <ClCompile Include="CSprite.cpp" />
     <ClCompile Include="CAppRunner.cpp" />
     <ClCompile Include="CBackBuffer.cpp" />
