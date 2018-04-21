@@ -50,6 +50,8 @@ void CTestScene::ProcessInput()
 LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	Vector2d pos = { (double)(rand() % CLIENT_WIDTH),50 };
+	Vector2d dropPosL = { 0, CLIENT_HEIGHT *0.5f };
+	Vector2d dropPosR = { CLIENT_WIDTH, CLIENT_HEIGHT * 0.5f };
 	//Vector2d pos = { m_player->GetPosition().x, 50 };
 
 	switch (message)
@@ -61,6 +63,10 @@ LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 			m_bullets.AddObject(new CNWayBullet(pos, m_player->GetPosition(), 7));
 		else if (wParam == 'c' || wParam == 'C')
 			m_bullets.AddObject(new CCircularBullet(pos, 50, m_player->GetPosition(), 10));
+		else if (wParam == 'd' || wParam == 'D') {
+			m_bullets.AddObject(new CDropBullet(dropPosL, { 3, -10 }));
+			m_bullets.AddObject(new CDropBullet(dropPosR, { -3, -10 }));
+		}
 		break;
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);
