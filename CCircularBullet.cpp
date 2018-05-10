@@ -40,9 +40,9 @@ void CCircularBullet::Update()
 	}
 
 	m_position += (m_direction * BULLET_SPEED);
-	m_radius += 1;
-	if (m_radius > 150)
-		m_radius -= 1;
+	//m_radius += 1;
+	//if (m_radius > 150)
+	//	m_radius -= 1;
 }
 
 void CCircularBullet::Draw(HDC hdc)
