@@ -81,6 +81,9 @@
     <Filter Include="Object\Bullet\Circular">
       <UniqueIdentifier>{a4ca6d44-c2b8-4979-b554-5de48a738afa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Bullet\Missile">
+      <UniqueIdentifier>{bf5e8679-3805-4374-807d-09d8a7e2bb69}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -173,6 +176,9 @@
     <ClInclude Include="CCircularBullet.h">
       <Filter>Object\Bullet\Circular</Filter>
     </ClInclude>
+    <ClInclude Include="CTraceBullet.h">
+      <Filter>Object\Bullet\Missile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAppRunner.cpp">
@@ -252,6 +258,9 @@
     </ClCompile>
     <ClCompile Include="CCircularBullet.cpp">
       <Filter>Object\Bullet\Circular</Filter>
+    </ClCompile>
+    <ClCompile Include="CTraceBullet.cpp">
+      <Filter>Object\Bullet\Missile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
