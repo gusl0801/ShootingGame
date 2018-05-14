@@ -8,6 +8,7 @@
 #include "CDropBullet.h"
 #include "CCircularBullet.h"
 #include "CTraceBullet.h"
+#include "CRapidBullet.h"
 
 CTestScene::CTestScene()
 {
@@ -70,6 +71,10 @@ LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 		}
 		else if (wParam == 'm' || wParam == 'M') {
 			m_bullets.AddObject(new CTraceBullet(m_player, pos));
+		}
+		else if (wParam == 'r' || wParam == 'R') {
+			m_bullets.AddObject(new CRapidBullet(pos));
+			m_bullets.AddObject(new CRapidBullet(pos, m_player->GetPosition()));
 		}
 		break;
 	default:

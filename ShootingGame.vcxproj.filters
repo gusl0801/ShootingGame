@@ -84,6 +84,9 @@
     <Filter Include="Object\Bullet\Missile">
       <UniqueIdentifier>{bf5e8679-3805-4374-807d-09d8a7e2bb69}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Bullet\CRapidBullet">
+      <UniqueIdentifier>{86138389-6ba0-4986-8baa-c65e42b97d4a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -179,6 +182,9 @@
     <ClInclude Include="CTraceBullet.h">
       <Filter>Object\Bullet\Missile</Filter>
     </ClInclude>
+    <ClInclude Include="CRapidBullet.h">
+      <Filter>Object\Bullet\CRapidBullet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAppRunner.cpp">
@@ -261,6 +267,9 @@
     </ClCompile>
     <ClCompile Include="CTraceBullet.cpp">
       <Filter>Object\Bullet\Missile</Filter>
+    </ClCompile>
+    <ClCompile Include="CRapidBullet.cpp">
+      <Filter>Object\Bullet\CRapidBullet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
