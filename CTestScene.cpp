@@ -9,6 +9,7 @@
 #include "CCircularBullet.h"
 #include "CTraceBullet.h"
 #include "CRapidBullet.h"
+#include "CSplitBullet.h"
 
 CTestScene::CTestScene()
 {
@@ -75,6 +76,9 @@ LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 		else if (wParam == 'r' || wParam == 'R') {
 			m_bullets.AddObject(new CRapidBullet(pos));
 			m_bullets.AddObject(new CRapidBullet(pos, m_player->GetPosition()));
+		}
+		else if (wParam == 's' || wParam == 'S') {
+			m_bullets.AddObject(new CSplitBullet(pos, m_player->GetPosition()));
 		}
 		break;
 	default:
