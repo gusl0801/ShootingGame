@@ -2,6 +2,7 @@
 
 #include "CSprite.h"
 #include "Vector2D.h"
+#include "Collide.h"
 
 class CState;
 
@@ -30,7 +31,8 @@ protected:
 
 	Vector2d m_position;
 
+	Collide pos;
+
 	CState *m_curState;
 	queue<CState*> m_stateQueue;
 };
-

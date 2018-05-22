@@ -185,6 +185,9 @@
     <ClInclude Include="CRapidBullet.h">
       <Filter>Object\Bullet\CRapidBullet</Filter>
     </ClInclude>
+    <ClInclude Include="Collide.h">
+      <Filter>Object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAppRunner.cpp">
@@ -270,6 +273,9 @@
     </ClCompile>
     <ClCompile Include="CRapidBullet.cpp">
       <Filter>Object\Bullet\CRapidBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Collide.cpp">
+      <Filter>Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
