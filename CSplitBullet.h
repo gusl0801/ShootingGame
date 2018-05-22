@@ -23,11 +23,10 @@ private:
 	void Move() { m_position += (m_direction * BULLET_SPEED); }
 	void Split();
 
-	static const int SPLIT_LIMIT;
 	static const int SPLIT_NUM;
 	static const double SPLIT_RADIUS;
 
-	int m_splitGage;
+	CCounter m_splitGage;
 	bool m_isSplit;
 
 	CCircularBullet *m_splitedBullet;

@@ -39,6 +39,6 @@ private:
 
 	Vector2d m_endPos;
 	PHASE m_phase;
-	int m_count = 0;
+	CCounter m_warnCounter = 0;
 };
 

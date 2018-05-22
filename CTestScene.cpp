@@ -80,6 +80,9 @@ LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 		else if (wParam == 's' || wParam == 'S') {
 			m_bullets.AddObject(new CSplitBullet(pos, m_player->GetPosition()));
 		}
+		else if (wParam == 't' || wParam == 'T') {
+			m_bullets.AddObject(new CTraceBullet(m_player, pos));
+		}
 		break;
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);

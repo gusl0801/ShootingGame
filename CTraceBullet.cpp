@@ -6,7 +6,8 @@ CTraceBullet::CTraceBullet(CGameObject *target, const Vector2d &position)
 {
 	m_target = target;
 	m_position = position;
-	m_count = 0;
+	m_traceCounter.SetLimit(CCounter::SecondToFrame(0.2f));
+	m_deleteCounter.SetLimit(CCounter::SecondToFrame(2.0f));
 	TraceTarget();
 }
 
@@ -18,10 +19,11 @@ CTraceBullet::~CTraceBullet()
 void CTraceBullet::Update()
 {
 	const int PERIOD = 6;
-	++m_count;
-	++m_isDelete;
-	if (m_count > PERIOD) {
-		m_count = 0;
+	m_traceCounter.Increase();
+	m_deleteCounter.Increase();
+
+	if (m_traceCounter.isLimit()) {
+		m_traceCounter.ResetCount();
 		TraceTarget();
 	}
 	Move();

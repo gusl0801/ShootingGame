@@ -5,7 +5,7 @@
 #include "CTitleScene.h"
 #include "CNullScene.h"
 
-#define MS_PER_UPDATE 1 / 80.0f // 0.016f 일반적인 모니터는 1초에 60번 화면을 갱신
+#define MS_PER_UPDATE 1 / FPS // 0.016f 일반적인 모니터는 1초에 60번 화면을 갱신
 #define MAX_LOOP_COUNT 50 // update따라잡기는 한번에 최대 50번 까지만 가능하도록 설정
 #define TITLE_LENGTH	50	// 타이틀 문자열의 길이를 최대 50자로 설정
 

@@ -2,7 +2,6 @@
 #include "CSplitBullet.h"
 #include "CCircularBullet.h"
 
-const int CSplitBullet::SPLIT_LIMIT = 100;
 const int CSplitBullet::SPLIT_NUM = 10;
 const double CSplitBullet::SPLIT_RADIUS = 30;
 
@@ -15,7 +14,7 @@ CSplitBullet::CSplitBullet(const Vector2d &position, const Vector2d &targetPos)
 	m_direction.Normalize();
 
 	m_isSplit = false;
-	m_splitGage = 0;
+	m_splitGage.SetLimit(CCounter::SecondToFrame(1.5));
 }
 CSplitBullet::~CSplitBullet()
 {
@@ -27,8 +26,8 @@ void CSplitBullet::Update()
 	if (!m_isSplit) {
 		Move();
 
-		++m_splitGage;
-		if (m_splitGage > SPLIT_LIMIT) {
+		m_splitGage.Increase();
+		if (m_splitGage.isLimit()) {
 			m_isSplit = true;
 			m_splitGage = 0;
 

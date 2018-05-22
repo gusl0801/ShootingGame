@@ -2,6 +2,7 @@
 
 #include "CSprite.h"
 #include "Vector2D.h"
+#include "CCounter.h"
 
 class CState;
 

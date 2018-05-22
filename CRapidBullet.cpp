@@ -43,10 +43,10 @@ void CRapidBullet::Draw(HDC hdc)
 
 void CRapidBullet::updatePhaseWarn()
 {
-	++m_count;
-	if (m_count > 100)
+	m_warnCounter.Increase();
+	if (m_warnCounter.isLimit())
 	{
-		m_count = 0;
+		m_warnCounter.ResetCount();
 		m_phase = PHASE::ATTACK;
 	}
 }
@@ -78,7 +78,8 @@ void CRapidBullet::drawPhaseAttack(HDC hdc)
 void CRapidBullet::init()
 {
 	m_phase = PHASE::WARN;
-	
+	m_warnCounter.SetLimit(CCounter::SecondToFrame(1.0f));
+
 	m_updater.insert(make_pair(PHASE::WARN, &CRapidBullet::updatePhaseWarn));
 	m_updater.insert(make_pair(PHASE::ATTACK, &CRapidBullet::updatePhaseAttack));
 	

@@ -30,9 +30,6 @@
     <Filter Include="Singleton">
       <UniqueIdentifier>{c5cb5604-6d32-4041-9c9f-eb0ed57ce9c0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Timer">
-      <UniqueIdentifier>{69acea2a-a190-4921-b08a-1e6cd65e4ba6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Vector">
       <UniqueIdentifier>{3ef4654f-b157-414e-953a-d4040917db28}</UniqueIdentifier>
     </Filter>
@@ -87,6 +84,15 @@
     <Filter Include="Object\Bullet\CRapidBullet">
       <UniqueIdentifier>{86138389-6ba0-4986-8baa-c65e42b97d4a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Time">
+      <UniqueIdentifier>{69acea2a-a190-4921-b08a-1e6cd65e4ba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Time\Timer">
+      <UniqueIdentifier>{8c07f2ca-4dfb-4f0b-84d1-68873b9c1bbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Time\Counter">
+      <UniqueIdentifier>{08a83893-5c51-41b2-92a0-fccfc6724211}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -112,9 +118,6 @@
     </ClInclude>
     <ClInclude Include="Singleton.h">
       <Filter>Singleton</Filter>
-    </ClInclude>
-    <ClInclude Include="CTimer.h">
-      <Filter>Timer</Filter>
     </ClInclude>
     <ClInclude Include="Vector2D.h">
       <Filter>Vector</Filter>
@@ -185,6 +188,12 @@
     <ClInclude Include="CRapidBullet.h">
       <Filter>Object\Bullet\CRapidBullet</Filter>
     </ClInclude>
+    <ClInclude Include="CTimer.h">
+      <Filter>Time\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="CCounter.h">
+      <Filter>Time\Counter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CAppRunner.cpp">
@@ -201,9 +210,6 @@
     </ClCompile>
     <ClCompile Include="CScene.cpp">
       <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="CTimer.cpp">
-      <Filter>Timer</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>Main\Subs</Filter>
@@ -270,6 +276,12 @@
     </ClCompile>
     <ClCompile Include="CRapidBullet.cpp">
       <Filter>Object\Bullet\CRapidBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimer.cpp">
+      <Filter>Time\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="CCounter.cpp">
+      <Filter>Time\Counter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
