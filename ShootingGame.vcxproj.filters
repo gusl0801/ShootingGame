@@ -188,11 +188,6 @@
     <ClInclude Include="CRapidBullet.h">
       <Filter>Object\Bullet\CRapidBullet</Filter>
     </ClInclude>
-    <ClInclude Include="CTimer.h">
-      <Filter>Time\Timer</Filter>
-    </ClInclude>
-    <ClInclude Include="CCounter.h">
-      <Filter>Time\Counter</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -277,11 +272,6 @@
     <ClCompile Include="CRapidBullet.cpp">
       <Filter>Object\Bullet\CRapidBullet</Filter>
     </ClCompile>
-    <ClCompile Include="CTimer.cpp">
-      <Filter>Time\Timer</Filter>
-    </ClCompile>
-    <ClCompile Include="CCounter.cpp">
-      <Filter>Time\Counter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
