@@ -93,6 +93,12 @@
     <Filter Include="Time\Counter">
       <UniqueIdentifier>{08a83893-5c51-41b2-92a0-fccfc6724211}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Collision">
+      <UniqueIdentifier>{7315afef-de2d-4c8a-9cdf-e579c3d4df21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player">
+      <UniqueIdentifier>{ee73955f-faee-4f70-9d58-c8f93e06e5dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -152,9 +158,6 @@
     <ClInclude Include="Main.h">
       <Filter>Main\Subs</Filter>
     </ClInclude>
-    <ClInclude Include="CPlayer.h">
-      <Filter>Object</Filter>
-    </ClInclude>
     <ClInclude Include="CIOManager.h">
       <Filter>IOManager</Filter>
     </ClInclude>
@@ -193,6 +196,12 @@
     </ClInclude>
     <ClInclude Include="CCounter.h">
       <Filter>Time\Counter</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Object\Collision</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -241,9 +250,6 @@
     <ClCompile Include="Main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="CPlayer.cpp">
-      <Filter>Object</Filter>
-    </ClCompile>
     <ClCompile Include="CIOManager.cpp">
       <Filter>IOManager</Filter>
     </ClCompile>
@@ -282,6 +288,12 @@
     </ClCompile>
     <ClCompile Include="CCounter.cpp">
       <Filter>Time\Counter</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Object\Collision</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

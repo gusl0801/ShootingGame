@@ -3,6 +3,7 @@
 #include "CSprite.h"
 #include "Vector2D.h"
 #include "CCounter.h"
+#include "Collision.h"
 
 class CState;
 
@@ -30,6 +31,8 @@ protected:
 	CSprite * m_renderer;
 
 	Vector2d m_position;
+
+	Collision m_collision;
 
 	CState *m_curState;
 	queue<CState*> m_stateQueue;

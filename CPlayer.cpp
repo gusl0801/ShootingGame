@@ -26,3 +26,8 @@ void CPlayer::Draw(HDC hdc)
 	Point2D position = { (int)m_position.x, (int)m_position.y };
 	m_renderer->Draw(hdc, position);
 }
+
+void CPlayer::TakeDamage(int dmg)
+{
+	m_hp -= dmg;
+}
