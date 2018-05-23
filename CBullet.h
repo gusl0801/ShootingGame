@@ -20,6 +20,8 @@ public:
 	void Rotate(const Vector2d &center, int angle, int radius);
 
 protected:
+	void DrawSimple(HDC hdc);
+
 	Vector2d m_direction;
 
 private:

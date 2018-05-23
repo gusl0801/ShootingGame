@@ -154,6 +154,7 @@
     <ClInclude Include="CBackground.h" />
     <ClInclude Include="CBullet.h" />
     <ClInclude Include="CCircularBullet.h" />
+    <ClInclude Include="CCounter.h" />
     <ClInclude Include="CDropBullet.h" />
     <ClInclude Include="CFileStream.h" />
     <ClInclude Include="CJson.h" />
@@ -189,6 +190,7 @@
     <ClCompile Include="CBackground.cpp" />
     <ClCompile Include="CBullet.cpp" />
     <ClCompile Include="CCircularBullet.cpp" />
+    <ClCompile Include="CCounter.cpp" />
     <ClCompile Include="CDropBullet.cpp" />
     <ClCompile Include="CFileStream.cpp" />
     <ClCompile Include="CJson.cpp" />

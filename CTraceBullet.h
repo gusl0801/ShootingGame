@@ -13,14 +13,14 @@ public:
 
 	virtual void ProcessCommand() {}
 
-	virtual bool IsDelete() { return m_isDelete > 100; }
+	virtual bool IsDelete() { return m_deleteCounter.isLimit(); }
 
 private:
 	void TraceTarget();
 	void Move() { m_position += m_direction * BULLET_SPEED; }
 
 	CGameObject * m_target;
-	int m_count;
-	int m_isDelete;
+	CCounter m_traceCounter;
+	CCounter m_deleteCounter;
 };
 
