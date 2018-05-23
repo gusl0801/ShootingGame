@@ -15,10 +15,9 @@ public:
 
 	void Test(int x, int y) { m_position.x += x; m_position.y += y; }
 
-
 	void TakeDamage(int dmg);
 
 private:
-	int m_hp;
+	int hp;
 };
 

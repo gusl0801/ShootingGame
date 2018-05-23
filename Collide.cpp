@@ -1,9 +1,9 @@
 #include "stdafx.h"
-#include "Collision.h"
+#include "Collide.h"
 
-Collision::~Collision() {}
+Collide::~Collide() {}
 
-bool Collision::IsCollide(Collision bullet)
+bool Collide::IsCollide(Collide bullet)
 {
 	if (bullet.radius == NULL)
 		if (((x1 < bullet.x2) && (y2 > bullet.y1)) ||

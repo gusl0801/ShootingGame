@@ -6,12 +6,10 @@ CGameObject::CGameObject()
 {
 	m_renderer = new CSprite();
 
-	/*
-	if ((object == player) || (object == rectangle)
+	/*if ((object == player) || (object == rectangle)
 		pos = Collide(x1, x2, y1, y2);
 	else if (object == circle)
-		pos = Collide(x1, x2, y1, y2, radius);
-	*/
+		pos = Collide(x1, x2, y1, y2, radius);*/
 }
 
 
