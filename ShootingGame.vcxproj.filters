@@ -88,7 +88,13 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>0.Main\Subs</Filter>
     </ClCompile>
-    <ClCompile Include="Collision.cpp">
+    <ClCompile Include="CBoundingBox.cpp">
+      <Filter>2.Object\Collision\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="CBoundingCircle.cpp">
+      <Filter>2.Object\Collision\Circle</Filter>
+    </ClCompile>
+    <ClCompile Include="Collidable.cpp">
       <Filter>2.Object\Collision</Filter>
     </ClCompile>
   </ItemGroup>
@@ -192,7 +198,13 @@
     <ClInclude Include="Vector2D.h">
       <Filter>3.Fundamental\Vector</Filter>
     </ClInclude>
-    <ClInclude Include="Collision.h">
+    <ClInclude Include="CBoundingBox.h">
+      <Filter>2.Object\Collision\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="CBoundingCircle.h">
+      <Filter>2.Object\Collision\Circle</Filter>
+    </ClInclude>
+    <ClInclude Include="Collidable.h">
       <Filter>2.Object\Collision</Filter>
     </ClInclude>
   </ItemGroup>
@@ -297,6 +309,12 @@
     </Filter>
     <Filter Include="3.Fundamental\Vector">
       <UniqueIdentifier>{f7f21d7d-8639-4f5a-a883-0be90c7db58c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Collision\Box">
+      <UniqueIdentifier>{55e27683-a958-4663-b992-f271af33899b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Collision\Circle">
+      <UniqueIdentifier>{be3d05d4-e663-4176-ad9e-e1d3dbc3419a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -152,6 +152,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CBackground.h" />
+    <ClInclude Include="CBoundingBox.h" />
+    <ClInclude Include="CBoundingCircle.h" />
     <ClInclude Include="CBullet.h" />
     <ClInclude Include="CCircularBullet.h" />
     <ClInclude Include="CCounter.h" />
@@ -159,7 +161,7 @@
     <ClInclude Include="CFileStream.h" />
     <ClInclude Include="CJson.h" />
     <ClInclude Include="CIOManager.h" />
-    <ClInclude Include="Collision.h" />
+    <ClInclude Include="Collidable.h" />
     <ClInclude Include="CRapidBullet.h" />
     <ClInclude Include="CTraceBullet.h" />
     <ClInclude Include="CNWayBullet.h" />
@@ -188,6 +190,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CBackground.cpp" />
+    <ClCompile Include="CBoundingBox.cpp" />
+    <ClCompile Include="CBoundingCircle.cpp" />
     <ClCompile Include="CBullet.cpp" />
     <ClCompile Include="CCircularBullet.cpp" />
     <ClCompile Include="CCounter.cpp" />
@@ -195,7 +199,7 @@
     <ClCompile Include="CFileStream.cpp" />
     <ClCompile Include="CJson.cpp" />
     <ClCompile Include="CIOManager.cpp" />
-    <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="Collidable.cpp" />
     <ClCompile Include="CRapidBullet.cpp" />
     <ClCompile Include="CTraceBullet.cpp" />
     <ClCompile Include="CNWayBullet.cpp" />
