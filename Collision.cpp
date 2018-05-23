@@ -1,9 +1,9 @@
 #include "stdafx.h"
-#include "Collide.h"
+#include "Collision.h"
 
-Collide::~Collide() {}
+Collision::~Collision() {}
 
-bool Collide::IsCollide(Collide bullet)
+bool Collision::IsCollide(Collision bullet)
 {
 	if (bullet.radius == NULL)
 		if (((x1 < bullet.x2) && (y2 > bullet.y1)) ||
@@ -32,5 +32,4 @@ bool Collide::IsCollide(Collide bullet)
 		x, y == center point
 	
 	*/
-
 }

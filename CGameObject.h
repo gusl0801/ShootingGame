@@ -2,8 +2,8 @@
 
 #include "CSprite.h"
 #include "Vector2D.h"
-#include "Collide.h"
 #include "CCounter.h"
+#include "Collision.h"
 
 class CState;
 
@@ -13,7 +13,7 @@ public:
 	CGameObject();
 	virtual ~CGameObject();
 
-	// ìƒì†ë°›ëŠ” í´ë˜ìŠ¤ì—ì„œ ì˜¤ë²„ë¼ì´ë”©ì´ í•„ìš”í•œ í•¨ìˆ˜ë“¤
+	// »ó¼Ó¹Ş´Â Å¬·¡½º¿¡¼­ ¿À¹ö¶óÀÌµùÀÌ ÇÊ¿äÇÑ ÇÔ¼öµé
 	virtual void Update() = 0;
 	virtual void Draw(HDC hdc) = 0;
 
@@ -21,7 +21,7 @@ public:
 
 	virtual bool IsDelete() = 0;
 
-	// ìƒì†ë°›ëŠ” í´ë˜ìŠ¤ì—ì„œ ì˜¤ë²„ë¼ì´ë”© í•  í•„ìš”ê°€ ì—†ëŠ” í•¨ìˆ˜ë“¤	
+	// »ó¼Ó¹Ş´Â Å¬·¡½º¿¡¼­ ¿À¹ö¶óÀÌµù ÇÒ ÇÊ¿ä°¡ ¾ø´Â ÇÔ¼öµé	
 	CState* GetState() const { return m_curState; }
 	Vector2d GetPosition() const { return m_position;}
 
@@ -32,8 +32,9 @@ protected:
 
 	Vector2d m_position;
 
-	Collide pos;
+	Collision m_collision;
 
 	CState *m_curState;
 	queue<CState*> m_stateQueue;
 };
+

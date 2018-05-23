@@ -159,7 +159,7 @@
     <ClInclude Include="CFileStream.h" />
     <ClInclude Include="CJson.h" />
     <ClInclude Include="CIOManager.h" />
-    <ClInclude Include="Collide.h" />
+    <ClInclude Include="Collision.h" />
     <ClInclude Include="CRapidBullet.h" />
     <ClInclude Include="CTraceBullet.h" />
     <ClInclude Include="CNWayBullet.h" />
@@ -195,7 +195,7 @@
     <ClCompile Include="CFileStream.cpp" />
     <ClCompile Include="CJson.cpp" />
     <ClCompile Include="CIOManager.cpp" />
-    <ClCompile Include="Collide.cpp" />
+    <ClCompile Include="Collision.cpp" />
     <ClCompile Include="CRapidBullet.cpp" />
     <ClCompile Include="CTraceBullet.cpp" />
     <ClCompile Include="CNWayBullet.cpp" />
