@@ -25,7 +25,7 @@ CBullet::~CBullet()
 
 void CBullet::Update()
 {
-	Move();
+	SimpleMove();
 }
 
 void CBullet::Draw(HDC hdc)
