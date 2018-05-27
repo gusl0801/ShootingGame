@@ -97,6 +97,9 @@
     <ClCompile Include="Collidable.cpp">
       <Filter>2.Object\Collision</Filter>
     </ClCompile>
+    <ClCompile Include="CExtensionBullet.cpp">
+      <Filter>2.Object\Bullet\Extension</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -207,6 +210,9 @@
     <ClInclude Include="Collidable.h">
       <Filter>2.Object\Collision</Filter>
     </ClInclude>
+    <ClInclude Include="CExtensionBullet.h">
+      <Filter>2.Object\Bullet\Extension</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="ShootingGame.ico">
@@ -315,6 +321,9 @@
     </Filter>
     <Filter Include="2.Object\Collision\Circle">
       <UniqueIdentifier>{be3d05d4-e663-4176-ad9e-e1d3dbc3419a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Bullet\Extension">
+      <UniqueIdentifier>{a7b5fcd5-5bb9-4a13-a0d7-3f54866e978f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

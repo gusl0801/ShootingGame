@@ -10,11 +10,16 @@ public:
 	CBoundingCircle(Vector2d center, double radius);
 	~CBoundingCircle();
 
-	virtual bool isCollide(const Collidable &other);
 
+	Vector2d GetCenter() const { return m_center; }
+	double GetRadius() const { return m_radius; }
+
+	virtual bool IsCollide(const Collidable &other) const override;
+	virtual bool IsInScreen() const override;
+	virtual bool collisionCheck(const Vector2d &position) const override;
 private:
-	bool collisionCheck(const CBoundingCircle &other);
-	bool collisionCheck(const CBoundingBox &other);
+	bool collisionCheck(const CBoundingCircle &other) const;
+	bool collisionCheck(const CBoundingBox &other) const;
 
 	double m_radius;
 	Vector2d m_center;

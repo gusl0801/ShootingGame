@@ -7,14 +7,17 @@ class CBoundingBox :
 	public Collidable
 {
 public:
-	CBoundingBox(Vector2d leftTop, Vector2d rightBot);
+	CBoundingBox(const Vector2d & leftTop, const Vector2d & rightBot);
+	CBoundingBox(RECT rect);
+	CBoundingBox(const Vector2d &center, double radius);
 	~CBoundingBox();
 
-	virtual bool isCollide(const Collidable &other);
-	
+	virtual bool IsCollide(const Collidable &other) const override;
+	virtual bool IsInScreen() const override;
+	virtual bool collisionCheck(const Vector2d &position) const override;
 private:
-	bool collisionCheck(const CBoundingCircle &other);
-	bool collisionCheck(const CBoundingBox &other);
+	bool collisionCheck(const CBoundingCircle &other) const;
+	bool collisionCheck(const CBoundingBox &other) const;
 
 	Vector2d m_leftTop;
 	Vector2d m_rightBot;
