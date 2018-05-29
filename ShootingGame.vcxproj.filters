@@ -10,12 +10,6 @@
     <ClCompile Include="CCounter.cpp">
       <Filter>3.Fundamental\Time\Counter</Filter>
     </ClCompile>
-    <ClCompile Include="CBackBuffer.cpp">
-      <Filter>Drawble</Filter>
-    </ClCompile>
-    <ClCompile Include="CBackground.cpp">
-      <Filter>Drawble</Filter>
-    </ClCompile>
     <ClCompile Include="CGameApp.cpp">
       <Filter>0.Main\App</Filter>
     </ClCompile>
@@ -40,9 +34,6 @@
     <ClCompile Include="CPlayer.cpp">
       <Filter>2.Object\Player</Filter>
     </ClCompile>
-    <ClCompile Include="CRenderer.cpp">
-      <Filter>Drawble</Filter>
-    </ClCompile>
     <ClCompile Include="CScene.cpp">
       <Filter>1.Scene</Filter>
     </ClCompile>
@@ -63,9 +54,6 @@
     </ClCompile>
     <ClCompile Include="CTimer.cpp">
       <Filter>3.Fundamental\Time\Timer</Filter>
-    </ClCompile>
-    <ClCompile Include="CSprite.cpp">
-      <Filter>Drawble</Filter>
     </ClCompile>
     <ClCompile Include="CCircularBullet.cpp">
       <Filter>2.Object\Bullet\Circular</Filter>
@@ -100,6 +88,21 @@
     <ClCompile Include="CExtensionBullet.cpp">
       <Filter>2.Object\Bullet\Extension</Filter>
     </ClCompile>
+    <ClCompile Include="CBackBuffer.cpp">
+      <Filter>Drawble\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="CBackground.cpp">
+      <Filter>Drawble\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimator.cpp">
+      <Filter>Drawble\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="CSprite.cpp">
+      <Filter>Drawble\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="CRenderer.cpp">
+      <Filter>Drawble\Renderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -110,12 +113,6 @@
     </ClInclude>
     <ClInclude Include="CCounter.h">
       <Filter>3.Fundamental\Time\Counter</Filter>
-    </ClInclude>
-    <ClInclude Include="CBackBuffer.h">
-      <Filter>Drawble</Filter>
-    </ClInclude>
-    <ClInclude Include="CBackground.h">
-      <Filter>Drawble</Filter>
     </ClInclude>
     <ClInclude Include="CGameApp.h">
       <Filter>0.Main\App</Filter>
@@ -141,9 +138,6 @@
     <ClInclude Include="CPlayer.h">
       <Filter>2.Object\Player</Filter>
     </ClInclude>
-    <ClInclude Include="CRenderer.h">
-      <Filter>Drawble</Filter>
-    </ClInclude>
     <ClInclude Include="CScene.h">
       <Filter>1.Scene</Filter>
     </ClInclude>
@@ -164,9 +158,6 @@
     </ClInclude>
     <ClInclude Include="CTimer.h">
       <Filter>3.Fundamental\Time\Timer</Filter>
-    </ClInclude>
-    <ClInclude Include="CSprite.h">
-      <Filter>Drawble</Filter>
     </ClInclude>
     <ClInclude Include="CCircularBullet.h">
       <Filter>2.Object\Bullet\Circular</Filter>
@@ -212,6 +203,21 @@
     </ClInclude>
     <ClInclude Include="CExtensionBullet.h">
       <Filter>2.Object\Bullet\Extension</Filter>
+    </ClInclude>
+    <ClInclude Include="CBackBuffer.h">
+      <Filter>Drawble\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="CBackground.h">
+      <Filter>Drawble\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimator.h">
+      <Filter>Drawble\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="CSprite.h">
+      <Filter>Drawble\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="CRenderer.h">
+      <Filter>Drawble\Renderer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -324,6 +330,21 @@
     </Filter>
     <Filter Include="2.Object\Bullet\Extension">
       <UniqueIdentifier>{a7b5fcd5-5bb9-4a13-a0d7-3f54866e978f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawble\Buffer">
+      <UniqueIdentifier>{198eb43f-64dd-4fd0-990b-20061b40867a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawble\Background">
+      <UniqueIdentifier>{a837452a-da37-4328-914f-048a87378798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawble\Sprite">
+      <UniqueIdentifier>{bb7cf68f-0cd1-4b92-8ceb-badf48fef1ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawble\Animator">
+      <UniqueIdentifier>{6c70bd64-77af-468f-8133-a3593fd5bf53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawble\Renderer">
+      <UniqueIdentifier>{4cf945eb-615c-4426-b92a-4a50fd39bed7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,5 @@
 #pragma once
 
-#include "CSprite.h"
 #include "Vector2D.h"
 #include "CCounter.h"
 #include "Collidable.h"
@@ -29,12 +28,8 @@ public:
 	Vector2d GetPosition() const { return m_position;}
 	Collidable* GetBoundary() const { return m_boundary; }
 
-	void ChangeSprite(AnimationState state) { m_renderer->ChangeState(state); }
-	
 protected:
 	bool IsInScreen() const { return m_boundary->IsInScreen(); }
-
-	CSprite * m_renderer;
 
 	Vector2d m_position;
 	

@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CAnimator.h" />
     <ClInclude Include="CBackground.h" />
     <ClInclude Include="CBoundingBox.h" />
     <ClInclude Include="CBoundingCircle.h" />
@@ -190,6 +191,7 @@
     <ClInclude Include="Vector2D.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CAnimator.cpp" />
     <ClCompile Include="CBackground.cpp" />
     <ClCompile Include="CBoundingBox.cpp" />
     <ClCompile Include="CBoundingCircle.cpp" />

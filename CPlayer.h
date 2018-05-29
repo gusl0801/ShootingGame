@@ -18,5 +18,11 @@ public:
 private:
 	int m_width;
 	int m_height;
+
+	CImage m_image;
+
+	int shape = 0;
+	bool isRight = true;
+	CCounter counter;
 };
 

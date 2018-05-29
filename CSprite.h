@@ -19,35 +19,27 @@ class CSprite
 {
 public:
 	CSprite();
-	virtual ~CSprite();
+	~CSprite();
 
-	void ChangeState(AnimationState state) { m_state = state; }
+	void Load(LPCTSTR szAddress, int segement, int startPoint, const Point2D &size);
+	void LoadFromFile(LPSTR szAddress);
 	
-	void Load(LPCTSTR szAddress);
-	virtual void Load(LPCTSTR szAddress, Point2D partition);
+	void Draw(HDC hdc, const Vector2d & position);
+	void Draw(HDC hdc, const Vector2d & position, const Point2D & size);
 	
-	virtual void Update();
-	
-	virtual void Draw(HDC hdc, const Point2D& position);
-	
-protected: 
-	virtual void AlphaBlend(HDC hdc, const Point2D& position, DrawFunc drawFn);
+	void Add(int num) { m_imagePosition = min(m_imagePosition + num, m_segement); }
+	void Sub(int num) { m_imagePosition = max(m_imagePosition - num, m_segement); }
 
-	virtual void AlphaBlend(HDC hdc, const Point2D& position) {}
+	void Increase() { Add(1); }
+	void Decrease() { Sub(1); }
 
-protected:
-	AnimationState m_state;
-	Point2D m_partition;		// 스프라이트가 x,y축으로 몇개의 이미지로 구성되는지
-	Point2D m_outputPosition;	// 스프라이트 출력 위치
-
-	vector<CRenderer*> m_renderers;	// 스프라이트 이미지
-	vector<Point2D> m_imageSizes;	// 한 번에 출력할 스프라이트 이미지의 크기
+	void AlphaBlend(HDC hdc, const Point2D& position, DrawFunc drawFn);
+	void AlphaBlend(HDC hdc, const Point2D& position) {}
 
 private:
-	short m_index;
-	
-	short m_animationPerSecond;		// 1초에 몇 회 애니메이션을 진행할 것 인지
-	short m_animationDelay = 0;		// 애니메이션 지연 횟수
-	short m_animationCount = 0;		// 애니메이션 업데이트를 위해 증가 시킨 횟수
+	int m_segement;			  // 몇 개의 영역으로 나누어지는지, 0 ~ n
+	int m_imagePosition;	  // 이미지 상에서 출력할 위치
+	Point2D m_imageSize;	  // 이미지 상에서 출력할 크기
+	CRenderer* m_renderer;
 };
 
