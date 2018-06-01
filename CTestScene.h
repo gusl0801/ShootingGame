@@ -28,5 +28,7 @@ private:
 	CPlayer *m_player;
 
 	CObjectManager m_bullets;
+	CObjectManager m_enemys;
+
 };
 

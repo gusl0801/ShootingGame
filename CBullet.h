@@ -7,6 +7,7 @@ class CBullet : public CGameObject
 {
 public:
 	CBullet();
+	CBullet(Vector2d pos);
 	CBullet(const Vector2d &position, const Vector2d &direction);
 	virtual ~CBullet();
 

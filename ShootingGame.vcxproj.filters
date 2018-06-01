@@ -103,6 +103,9 @@
     <ClCompile Include="CRenderer.cpp">
       <Filter>Drawble\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="CEnemy.cpp">
+      <Filter>2.Object\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -218,6 +221,9 @@
     </ClInclude>
     <ClInclude Include="CRenderer.h">
       <Filter>Drawble\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemy.h">
+      <Filter>2.Object\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -345,6 +351,9 @@
     </Filter>
     <Filter Include="Drawble\Renderer">
       <UniqueIdentifier>{4cf945eb-615c-4426-b92a-4a50fd39bed7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Enemy">
+      <UniqueIdentifier>{d107f375-db74-49e4-92d8-d3273368ffd6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
