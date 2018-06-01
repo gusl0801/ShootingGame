@@ -12,6 +12,16 @@ CBullet::CBullet()
 	m_direction.Normalize();
 }
 
+CBullet::CBullet(Vector2d pos)
+{
+	m_position.x = pos.x;
+	m_position.y = pos.y+20;
+
+	m_direction.x = 0;
+	m_direction.y = 1;
+	m_direction.Normalize();
+}
+
 CBullet::CBullet(const Vector2d &position, const Vector2d &direction)
 {
 	m_position = position;

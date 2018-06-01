@@ -2,6 +2,7 @@
 #include "CTestScene.h"
 #include "CGameApp.h"
 #include "CPlayer.h"
+#include "CEnemy.h"
 #include "CBullet.h"
 #include "CNWayBullet.h"
 #include "CSplitBullet.h"
@@ -31,6 +32,7 @@ void CTestScene::Update()
 	m_background.Update();
 	m_player->Update();
 
+	m_enemys.Update();
 	m_bullets.Update();
 	m_bullets.CheckDelete();
 }
@@ -40,6 +42,7 @@ void CTestScene::Draw(HDC hdc)
 	m_background.Draw(hdc);
 	m_player->Draw(hdc);
 
+	m_enemys.Draw(hdc);
 	m_bullets.Draw(hdc);
 }
 
@@ -60,6 +63,17 @@ LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 
 	switch (message)
 	{
+	case WM_CREATE:
+		SetTimer(hWnd, 1, 2000, NULL);
+		break;
+	case WM_TIMER:
+		switch (wParam)
+		{
+		case 1:
+
+			break;
+		}
+		break;
 	case WM_KEYDOWN:
 		if (wParam == VK_SPACE)
 			m_bullets.AddObject(new CBullet());
@@ -87,6 +101,12 @@ LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 		else if (wParam == 'e' || wParam == 'E') {
 			m_bullets.AddObject(new CExtensionBullet(pos, 50, 10));
 		}
+		else if (wParam == 'q' || wParam == 'Q') {
+			m_enemys.AddObject(new CEnemy());
+		}
+		break;
+	case WM_DESTROY:
+		KillTimer(hWnd, 1);
 		break;
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);

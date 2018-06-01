@@ -159,6 +159,7 @@
     <ClInclude Include="CCircularBullet.h" />
     <ClInclude Include="CCounter.h" />
     <ClInclude Include="CDropBullet.h" />
+    <ClInclude Include="CEnemy.h" />
     <ClInclude Include="CExtensionBullet.h" />
     <ClInclude Include="CFileStream.h" />
     <ClInclude Include="CJson.h" />
@@ -199,6 +200,7 @@
     <ClCompile Include="CCircularBullet.cpp" />
     <ClCompile Include="CCounter.cpp" />
     <ClCompile Include="CDropBullet.cpp" />
+    <ClCompile Include="CEnemy.cpp" />
     <ClCompile Include="CExtensionBullet.cpp" />
     <ClCompile Include="CFileStream.cpp" />
     <ClCompile Include="CJson.cpp" />
