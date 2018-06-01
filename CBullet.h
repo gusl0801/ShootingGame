@@ -24,7 +24,7 @@ protected:
 
 	Vector2d m_direction;
 
-private:
-	void Move() { m_position += m_direction * BULLET_SPEED; }
+protected:
+	void SimpleMove() { m_position += m_direction * BULLET_SPEED; }
 };
 

@@ -4,6 +4,8 @@ class CGameObject;
 
 typedef void(*DrawFunc)(CGameObject*);
 
+#define TRANSPARENT_COLOR RGB(255,0,255)
+
 class CRenderer
 {
 public:
@@ -29,8 +31,8 @@ public:
 	void StretchBltEx(HDC hdc, const Point2D& screenPos, const Point2D& imagePos, const Point2D& size, double xRate, double yRate);
 
 	// 인자로 넘어온 색상을 제거하고 출력합니다.
-	void TransparentBlt(HDC hdc, const Point2D& screenPos, COLORREF color);
-	void TransparentBltEx(HDC hdc, const Point2D& screenPos, const Point2D& imagePos,const Point2D& size, COLORREF color);
+	void TransparentBlt(HDC hdc, const Point2D& screenPos);
+	void TransparentBltEx(HDC hdc, const Vector2d & screenPos, const Point2D& imagePos,const Point2D& size);
 
 	void AlphaBlend(HDC hdc, const Point2D& screenPos, DrawFunc drawFn);
 

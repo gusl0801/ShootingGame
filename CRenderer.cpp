@@ -49,16 +49,16 @@ void CRenderer::StretchBltEx(HDC hdc, const Point2D& screenPos, const Point2D& i
 		imagePos.x * size.x, imagePos.y * size.y, size.x, size.y, SRCCOPY);
 }
 
-void CRenderer::TransparentBlt(HDC hdc, const Point2D & screenPos, COLORREF color)
+void CRenderer::TransparentBlt(HDC hdc, const Point2D & screenPos)
 {
 	m_image.TransparentBlt(hdc, screenPos.x, screenPos.y, m_image.GetWidth(), m_image.GetHeight(),
-		0, 0, m_image.GetWidth(), m_image.GetHeight(), color);
+		0, 0, m_image.GetWidth(), m_image.GetHeight(), TRANSPARENT_COLOR);
 }
 
-void CRenderer::TransparentBltEx(HDC hdc, const Point2D& screenPos, const Point2D& imagePos, const Point2D & size, COLORREF color)
+void CRenderer::TransparentBltEx(HDC hdc, const Vector2d & screenPos, const Point2D& imagePos, const Point2D & size)
 {
 	m_image.TransparentBlt(hdc, screenPos.x, screenPos.y, size.x, size.y,
-		imagePos.x * size.x, imagePos.y * size.y, size.x, size.y, color);
+		imagePos.x * size.x, imagePos.y * size.y, size.x, size.y, TRANSPARENT_COLOR);
 }
 
 void CRenderer::AlphaBlend(HDC hdc, const Point2D& screenPos, DrawFunc drawFn)

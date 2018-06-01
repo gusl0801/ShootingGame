@@ -1,6 +1,7 @@
 #pragma once
 #include "stdafx.h"
 
+#define POW2(value) value * value
 
 template <class Ty>
 class Vector2D
@@ -24,7 +25,8 @@ public:
 	void Normalize() { double length = Length(); x /= length, y /= length; }
 		
 	double Length() const { return std::sqrt(x * x + y * y); }
-
+	double Length(const Vector2D<Ty> &other) const { return sqrt(POW2(x - other.x) + POW2(y - other.y)); }
+	
 	Vector2D<Ty> Reflect(const Vector2D<Ty> &other) const
 	{
 		Vector2D<Ty> normal = Vector2D<Ty>::Normalize(other);

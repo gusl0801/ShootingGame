@@ -1,290 +1,355 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="App">
-      <UniqueIdentifier>{783d09f4-67f0-4248-8a85-11f4a0e30e00}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AppRunner">
-      <UniqueIdentifier>{6a2d38e9-57b8-4a6f-a12a-84c3177d06ca}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="BackBuffer">
-      <UniqueIdentifier>{5a0e03f3-b108-4a3e-8938-dbb80a885c91}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Main">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Main\Subs">
-      <UniqueIdentifier>{142049bd-60a6-4b9f-ad4e-180044e06697}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Main\Subs\Resources">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Object">
-      <UniqueIdentifier>{2fd4f174-172c-48f8-a883-9ea1d29612cc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Scene">
-      <UniqueIdentifier>{ee16e140-5c68-4ca5-a1dd-9bc40d5c36ea}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Singleton">
-      <UniqueIdentifier>{c5cb5604-6d32-4041-9c9f-eb0ed57ce9c0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Vector">
-      <UniqueIdentifier>{3ef4654f-b157-414e-953a-d4040917db28}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Sound">
-      <UniqueIdentifier>{9e261b98-6d11-4202-993d-95b4c0126559}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Render">
-      <UniqueIdentifier>{effda44c-362f-4712-967d-3d4c36eb6401}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Scene\Main">
-      <UniqueIdentifier>{8218e7ca-7915-4849-9739-b97dd294bd86}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Scene\Title">
-      <UniqueIdentifier>{5007e8ba-0812-4bfb-bd80-0db55d8a625f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Scene\Other">
-      <UniqueIdentifier>{69de16ae-b810-41c5-98ec-336322fcd8b0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Scene\Test">
-      <UniqueIdentifier>{6d0c2b2d-5f2c-460b-a677-06bf3098aaa7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IOManager">
-      <UniqueIdentifier>{74f2f654-5916-4a8b-8012-89071a8dcb62}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IOManager\FileStream">
-      <UniqueIdentifier>{e9e58a48-b489-4911-9355-9b88d3a7cc4e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IOManager\JSON">
-      <UniqueIdentifier>{1b5c337c-790b-4a87-abbb-543e210a87f6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Bullet">
-      <UniqueIdentifier>{b286871a-7f17-4d6c-9033-08d6840a3f15}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\ObjectManager">
-      <UniqueIdentifier>{8c19c938-1cfa-4ea6-9675-1ba3af031604}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Bullet\N-Way">
-      <UniqueIdentifier>{605129c1-4b9b-42bd-b936-4a25b732cd45}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Bullet\Drop">
-      <UniqueIdentifier>{34700f67-ab61-47b8-b494-0e3ec2266e47}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Bullet\Split">
-      <UniqueIdentifier>{a5daf5f8-e7e6-47ac-a4c9-886d125937b8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Bullet\Circular">
-      <UniqueIdentifier>{a4ca6d44-c2b8-4979-b554-5de48a738afa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Bullet\Missile">
-      <UniqueIdentifier>{bf5e8679-3805-4374-807d-09d8a7e2bb69}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Bullet\CRapidBullet">
-      <UniqueIdentifier>{86138389-6ba0-4986-8baa-c65e42b97d4a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Time">
-      <UniqueIdentifier>{69acea2a-a190-4921-b08a-1e6cd65e4ba6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Time\Timer">
-      <UniqueIdentifier>{8c07f2ca-4dfb-4f0b-84d1-68873b9c1bbf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Time\Counter">
-      <UniqueIdentifier>{08a83893-5c51-41b2-92a0-fccfc6724211}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="Main.cpp">
+      <Filter>0.Main</Filter>
+    </ClCompile>
+    <ClCompile Include="CAppRunner.cpp">
+      <Filter>0.Main\App\AppRunner</Filter>
+    </ClCompile>
+    <ClCompile Include="CCounter.cpp">
+      <Filter>3.Fundamental\Time\Counter</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameApp.cpp">
+      <Filter>0.Main\App</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameObject.cpp">
+      <Filter>2.Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CIOManager.cpp">
+      <Filter>3.Fundamental\IOManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CFileStream.cpp">
+      <Filter>3.Fundamental\IOManager\FileStream</Filter>
+    </ClCompile>
+    <ClCompile Include="CJson.cpp">
+      <Filter>3.Fundamental\IOManager\JSon</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjectManager.cpp">
+      <Filter>2.Object\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="CBullet.cpp">
+      <Filter>2.Object\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>2.Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene.cpp">
+      <Filter>1.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CTestScene.cpp">
+      <Filter>1.Scene\0.Test</Filter>
+    </ClCompile>
+    <ClCompile Include="CMainScene.cpp">
+      <Filter>1.Scene\2.Main</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitleScene.cpp">
+      <Filter>1.Scene\1.Title</Filter>
+    </ClCompile>
+    <ClCompile Include="CNullScene.cpp">
+      <Filter>1.Scene\Null</Filter>
+    </ClCompile>
+    <ClCompile Include="CSoundPlayer.cpp">
+      <Filter>3.Fundamental\SoundManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimer.cpp">
+      <Filter>3.Fundamental\Time\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="CCircularBullet.cpp">
+      <Filter>2.Object\Bullet\Circular</Filter>
+    </ClCompile>
+    <ClCompile Include="CDropBullet.cpp">
+      <Filter>2.Object\Bullet\Drop</Filter>
+    </ClCompile>
+    <ClCompile Include="CNWayBullet.cpp">
+      <Filter>2.Object\Bullet\NWay</Filter>
+    </ClCompile>
+    <ClCompile Include="CRapidBullet.cpp">
+      <Filter>2.Object\Bullet\Rapid</Filter>
+    </ClCompile>
+    <ClCompile Include="CSplitBullet.cpp">
+      <Filter>2.Object\Bullet\Split</Filter>
+    </ClCompile>
+    <ClCompile Include="CTraceBullet.cpp">
+      <Filter>2.Object\Bullet\Trace</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>0.Main\Subs</Filter>
+    </ClCompile>
+    <ClCompile Include="CBoundingBox.cpp">
+      <Filter>2.Object\Collision\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="CBoundingCircle.cpp">
+      <Filter>2.Object\Collision\Circle</Filter>
+    </ClCompile>
+    <ClCompile Include="Collidable.cpp">
+      <Filter>2.Object\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="CExtensionBullet.cpp">
+      <Filter>2.Object\Bullet\Extension</Filter>
+    </ClCompile>
+    <ClCompile Include="CBackBuffer.cpp">
+      <Filter>Drawble\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="CBackground.cpp">
+      <Filter>Drawble\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimator.cpp">
+      <Filter>Drawble\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="CSprite.cpp">
+      <Filter>Drawble\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="CRenderer.cpp">
+      <Filter>Drawble\Renderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
-      <Filter>Main</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Main\Subs\Resources</Filter>
+      <Filter>0.Main</Filter>
     </ClInclude>
     <ClInclude Include="CAppRunner.h">
-      <Filter>AppRunner</Filter>
+      <Filter>0.Main\App\AppRunner</Filter>
+    </ClInclude>
+    <ClInclude Include="CCounter.h">
+      <Filter>3.Fundamental\Time\Counter</Filter>
     </ClInclude>
     <ClInclude Include="CGameApp.h">
-      <Filter>App</Filter>
-    </ClInclude>
-    <ClInclude Include="CBackBuffer.h">
-      <Filter>BackBuffer</Filter>
+      <Filter>0.Main\App</Filter>
     </ClInclude>
     <ClInclude Include="CGameObject.h">
-      <Filter>Object</Filter>
-    </ClInclude>
-    <ClInclude Include="CScene.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Singleton.h">
-      <Filter>Singleton</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2D.h">
-      <Filter>Vector</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Main\Subs</Filter>
-    </ClInclude>
-    <ClInclude Include="CSoundPlayer.h">
-      <Filter>Sound</Filter>
-    </ClInclude>
-    <ClInclude Include="CRenderer.h">
-      <Filter>Render</Filter>
-    </ClInclude>
-    <ClInclude Include="CSprite.h">
-      <Filter>Render</Filter>
-    </ClInclude>
-    <ClInclude Include="CNullScene.h">
-      <Filter>Scene\Other</Filter>
-    </ClInclude>
-    <ClInclude Include="CTitleScene.h">
-      <Filter>Scene\Title</Filter>
-    </ClInclude>
-    <ClInclude Include="CMainScene.h">
-      <Filter>Scene\Main</Filter>
-    </ClInclude>
-    <ClInclude Include="CTestScene.h">
-      <Filter>Scene\Test</Filter>
-    </ClInclude>
-    <ClInclude Include="CBackground.h">
-      <Filter>Render</Filter>
-    </ClInclude>
-    <ClInclude Include="Main.h">
-      <Filter>Main\Subs</Filter>
-    </ClInclude>
-    <ClInclude Include="CPlayer.h">
-      <Filter>Object</Filter>
+      <Filter>2.Object</Filter>
     </ClInclude>
     <ClInclude Include="CIOManager.h">
-      <Filter>IOManager</Filter>
-    </ClInclude>
-    <ClInclude Include="CJson.h">
-      <Filter>IOManager\JSON</Filter>
+      <Filter>3.Fundamental\IOManager</Filter>
     </ClInclude>
     <ClInclude Include="CFileStream.h">
-      <Filter>IOManager\FileStream</Filter>
+      <Filter>3.Fundamental\IOManager\FileStream</Filter>
     </ClInclude>
-    <ClInclude Include="CBullet.h">
-      <Filter>Object\Bullet</Filter>
+    <ClInclude Include="CJson.h">
+      <Filter>3.Fundamental\IOManager\JSon</Filter>
     </ClInclude>
     <ClInclude Include="CObjectManager.h">
-      <Filter>Object\ObjectManager</Filter>
+      <Filter>2.Object\Manager</Filter>
     </ClInclude>
-    <ClInclude Include="CSplitBullet.h">
-      <Filter>Object\Bullet\Split</Filter>
+    <ClInclude Include="CBullet.h">
+      <Filter>2.Object\Bullet</Filter>
     </ClInclude>
-    <ClInclude Include="CDropBullet.h">
-      <Filter>Object\Bullet\Drop</Filter>
+    <ClInclude Include="CPlayer.h">
+      <Filter>2.Object\Player</Filter>
     </ClInclude>
-    <ClInclude Include="CNWayBullet.h">
-      <Filter>Object\Bullet\N-Way</Filter>
+    <ClInclude Include="CScene.h">
+      <Filter>1.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CTestScene.h">
+      <Filter>1.Scene\0.Test</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitleScene.h">
+      <Filter>1.Scene\1.Title</Filter>
+    </ClInclude>
+    <ClInclude Include="CMainScene.h">
+      <Filter>1.Scene\2.Main</Filter>
+    </ClInclude>
+    <ClInclude Include="CNullScene.h">
+      <Filter>1.Scene\Null</Filter>
+    </ClInclude>
+    <ClInclude Include="CSoundPlayer.h">
+      <Filter>3.Fundamental\SoundManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimer.h">
+      <Filter>3.Fundamental\Time\Timer</Filter>
     </ClInclude>
     <ClInclude Include="CCircularBullet.h">
-      <Filter>Object\Bullet\Circular</Filter>
+      <Filter>2.Object\Bullet\Circular</Filter>
     </ClInclude>
-    <ClInclude Include="CTraceBullet.h">
-      <Filter>Object\Bullet\Missile</Filter>
+    <ClInclude Include="CDropBullet.h">
+      <Filter>2.Object\Bullet\Drop</Filter>
+    </ClInclude>
+    <ClInclude Include="CNWayBullet.h">
+      <Filter>2.Object\Bullet\NWay</Filter>
     </ClInclude>
     <ClInclude Include="CRapidBullet.h">
-      <Filter>Object\Bullet\CRapidBullet</Filter>
+      <Filter>2.Object\Bullet\Rapid</Filter>
     </ClInclude>
+    <ClInclude Include="CSplitBullet.h">
+      <Filter>2.Object\Bullet\Split</Filter>
+    </ClInclude>
+    <ClInclude Include="CTraceBullet.h">
+      <Filter>2.Object\Bullet\Trace</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>0.Main\Subs</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>0.Main\Subs</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>0.Main\Subs</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>3.Fundamental\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>3.Fundamental\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="CBoundingBox.h">
+      <Filter>2.Object\Collision\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="CBoundingCircle.h">
+      <Filter>2.Object\Collision\Circle</Filter>
+    </ClInclude>
+    <ClInclude Include="Collidable.h">
+      <Filter>2.Object\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="CExtensionBullet.h">
+      <Filter>2.Object\Bullet\Extension</Filter>
+    </ClInclude>
+    <ClInclude Include="CBackBuffer.h">
+      <Filter>Drawble\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="CBackground.h">
+      <Filter>Drawble\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimator.h">
+      <Filter>Drawble\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="CSprite.h">
+      <Filter>Drawble\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="CRenderer.h">
+      <Filter>Drawble\Renderer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CAppRunner.cpp">
-      <Filter>AppRunner</Filter>
-    </ClCompile>
-    <ClCompile Include="CGameApp.cpp">
-      <Filter>App</Filter>
-    </ClCompile>
-    <ClCompile Include="CBackBuffer.cpp">
-      <Filter>BackBuffer</Filter>
-    </ClCompile>
-    <ClCompile Include="CGameObject.cpp">
-      <Filter>Object</Filter>
-    </ClCompile>
-    <ClCompile Include="CScene.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Main\Subs</Filter>
-    </ClCompile>
-    <ClCompile Include="CSoundPlayer.cpp">
-      <Filter>Sound</Filter>
-    </ClCompile>
-    <ClCompile Include="CRenderer.cpp">
-      <Filter>Render</Filter>
-    </ClCompile>
-    <ClCompile Include="CSprite.cpp">
-      <Filter>Render</Filter>
-    </ClCompile>
-    <ClCompile Include="CNullScene.cpp">
-      <Filter>Scene\Other</Filter>
-    </ClCompile>
-    <ClCompile Include="CTitleScene.cpp">
-      <Filter>Scene\Title</Filter>
-    </ClCompile>
-    <ClCompile Include="CMainScene.cpp">
-      <Filter>Scene\Main</Filter>
-    </ClCompile>
-    <ClCompile Include="CTestScene.cpp">
-      <Filter>Scene\Test</Filter>
-    </ClCompile>
-    <ClCompile Include="CBackground.cpp">
-      <Filter>Render</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Main</Filter>
-    </ClCompile>
-    <ClCompile Include="CPlayer.cpp">
-      <Filter>Object</Filter>
-    </ClCompile>
-    <ClCompile Include="CIOManager.cpp">
-      <Filter>IOManager</Filter>
-    </ClCompile>
-    <ClCompile Include="CJson.cpp">
-      <Filter>IOManager\JSON</Filter>
-    </ClCompile>
-    <ClCompile Include="CFileStream.cpp">
-      <Filter>IOManager\FileStream</Filter>
-    </ClCompile>
-    <ClCompile Include="CBullet.cpp">
-      <Filter>Object\Bullet</Filter>
-    </ClCompile>
-    <ClCompile Include="CObjectManager.cpp">
-      <Filter>Object\ObjectManager</Filter>
-    </ClCompile>
-    <ClCompile Include="CSplitBullet.cpp">
-      <Filter>Object\Bullet\Split</Filter>
-    </ClCompile>
-    <ClCompile Include="CDropBullet.cpp">
-      <Filter>Object\Bullet\Drop</Filter>
-    </ClCompile>
-    <ClCompile Include="CNWayBullet.cpp">
-      <Filter>Object\Bullet\N-Way</Filter>
-    </ClCompile>
-    <ClCompile Include="CCircularBullet.cpp">
-      <Filter>Object\Bullet\Circular</Filter>
-    </ClCompile>
-    <ClCompile Include="CTraceBullet.cpp">
-      <Filter>Object\Bullet\Missile</Filter>
-    </ClCompile>
-    <ClCompile Include="CRapidBullet.cpp">
-      <Filter>Object\Bullet\CRapidBullet</Filter>
-    </ClCompile>
-    </ClCompile>
+    <Image Include="ShootingGame.ico">
+      <Filter>0.Main\Subs</Filter>
+    </Image>
+    <Image Include="small.ico">
+      <Filter>0.Main\Subs</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="0.Main">
+      <UniqueIdentifier>{5a7798f6-a25a-40f7-8ed1-5cf61ec3535e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawble">
+      <UniqueIdentifier>{396e06e5-9c6c-4dab-a3c8-b20b8c282fb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1.Scene">
+      <UniqueIdentifier>{144133d5-35c2-4253-b0da-a22cfdc3016c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object">
+      <UniqueIdentifier>{b8ebfdbd-3364-4908-ad7e-b9a5dc16bea4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Manager">
+      <UniqueIdentifier>{57cc69eb-4622-4854-8033-1b08fd20d145}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Bullet">
+      <UniqueIdentifier>{1c5d4399-d17e-488d-a0c2-5a8e59fc3514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Player">
+      <UniqueIdentifier>{34341a6f-7304-4cbd-8e31-a9eb21cd7599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Collision">
+      <UniqueIdentifier>{041d5351-3119-4cb9-840a-ea06219fa3f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1.Scene\0.Test">
+      <UniqueIdentifier>{ee9de6db-d569-40d9-9314-aaa72696e91b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1.Scene\1.Title">
+      <UniqueIdentifier>{901cf757-a4dc-45f7-814f-4dfde2c0f27a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1.Scene\2.Main">
+      <UniqueIdentifier>{a63b07d7-c3ab-49e9-b3fe-4007cbbbd47d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1.Scene\Null">
+      <UniqueIdentifier>{70e61b96-8329-4fc8-a626-73a05812ca32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.Fundamental">
+      <UniqueIdentifier>{686d0af7-9d0b-46ed-9a53-cf7382956351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.Fundamental\IOManager">
+      <UniqueIdentifier>{be9c0bb6-00bb-44c9-831e-33499b31da3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.Fundamental\IOManager\FileStream">
+      <UniqueIdentifier>{997c0319-8359-4672-9ec1-7f78564feda1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.Fundamental\IOManager\JSon">
+      <UniqueIdentifier>{b6a53dc4-86eb-4555-8e17-8d1c3528a287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.Fundamental\Time">
+      <UniqueIdentifier>{79699bb8-de45-4135-b1ff-28a29ebfad4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.Fundamental\Time\Counter">
+      <UniqueIdentifier>{3d6cde1a-1590-4879-abe3-8a225b3c6c0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.Fundamental\Time\Timer">
+      <UniqueIdentifier>{50c2fb22-51bd-4f4e-9713-b0cba221745e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.Fundamental\SoundManager">
+      <UniqueIdentifier>{11a4973d-c812-4d06-9a52-bebf153ab257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Bullet\Circular">
+      <UniqueIdentifier>{d32a4998-778a-4ab2-85ac-97cc77854509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Bullet\Drop">
+      <UniqueIdentifier>{45eb2f99-2ad3-4ac9-b253-eb9cf11da41b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Bullet\NWay">
+      <UniqueIdentifier>{e0999ead-f2c6-4650-9dc7-caaaf8f3f1d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Bullet\Rapid">
+      <UniqueIdentifier>{6fa0d6fc-e029-495f-8050-7b34fb051490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Bullet\Split">
+      <UniqueIdentifier>{1efe77f1-9dbb-4099-aaee-d61d87fee3df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Bullet\Trace">
+      <UniqueIdentifier>{f5718f65-5e97-4f43-b3aa-49c556d8b550}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Main\App">
+      <UniqueIdentifier>{eceffa05-0e50-4693-8bb4-33ce8ca39996}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Main\App\AppRunner">
+      <UniqueIdentifier>{c8a22267-5b89-4026-b08f-5ac313fe7f75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Main\Subs">
+      <UniqueIdentifier>{2fd9140c-6f05-497e-a63c-b12751a421e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.Fundamental\Singleton">
+      <UniqueIdentifier>{b4fd14f7-0696-4a1d-ab25-f2373b499119}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.Fundamental\Vector">
+      <UniqueIdentifier>{f7f21d7d-8639-4f5a-a883-0be90c7db58c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Collision\Box">
+      <UniqueIdentifier>{55e27683-a958-4663-b992-f271af33899b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Collision\Circle">
+      <UniqueIdentifier>{be3d05d4-e663-4176-ad9e-e1d3dbc3419a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Bullet\Extension">
+      <UniqueIdentifier>{a7b5fcd5-5bb9-4a13-a0d7-3f54866e978f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawble\Buffer">
+      <UniqueIdentifier>{198eb43f-64dd-4fd0-990b-20061b40867a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawble\Background">
+      <UniqueIdentifier>{a837452a-da37-4328-914f-048a87378798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawble\Sprite">
+      <UniqueIdentifier>{bb7cf68f-0cd1-4b92-8ceb-badf48fef1ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawble\Animator">
+      <UniqueIdentifier>{6c70bd64-77af-468f-8133-a3593fd5bf53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawble\Renderer">
+      <UniqueIdentifier>{4cf945eb-615c-4426-b92a-4a50fd39bed7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ShootingGame.rc">
-      <Filter>Main\Subs\Resources</Filter>
+      <Filter>0.Main\Subs</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="small.ico">
-      <Filter>Main\Subs\Resources</Filter>
-    </Image>
-    <Image Include="ShootingGame.ico">
-      <Filter>Main\Subs\Resources</Filter>
-    </Image>
   </ItemGroup>
 </Project>

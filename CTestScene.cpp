@@ -10,6 +10,7 @@
 #include "CTraceBullet.h"
 #include "CRapidBullet.h"
 #include "CSplitBullet.h"
+#include "CExtensionBullet.h"
 
 CTestScene::CTestScene()
 {
@@ -82,6 +83,9 @@ LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 		}
 		else if (wParam == 't' || wParam == 'T') {
 			m_bullets.AddObject(new CTraceBullet(m_player, pos));
+		}
+		else if (wParam == 'e' || wParam == 'E') {
+			m_bullets.AddObject(new CExtensionBullet(pos, 50, 10));
 		}
 		break;
 	default:

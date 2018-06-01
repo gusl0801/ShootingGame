@@ -15,9 +15,14 @@ public:
 
 	void Test(int x, int y) { m_position.x += x; m_position.y += y; }
 
-	void TakeDamage(int dmg);
-
 private:
-	int hp;
+	int m_width;
+	int m_height;
+
+	CImage m_image;
+
+	int shape = 0;
+	bool isRight = true;
+	CCounter counter;
 };
 

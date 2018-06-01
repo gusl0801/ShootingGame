@@ -1,9 +1,8 @@
 #pragma once
 
-#include "CSprite.h"
 #include "Vector2D.h"
-#include "Collide.h"
 #include "CCounter.h"
+#include "Collidable.h"
 
 class CState;
 
@@ -13,7 +12,7 @@ public:
 	CGameObject();
 	virtual ~CGameObject();
 
-	// ìƒì†ë°›ëŠ” í´ëž˜ìŠ¤ì—ì„œ ì˜¤ë²„ë¼ì´ë”©ì´ í•„ìš”í•œ í•¨ìˆ˜ë“¤
+	// »ó¼Ó¹Þ´Â Å¬·¡½º¿¡¼­ ¿À¹ö¶óÀÌµùÀÌ ÇÊ¿äÇÑ ÇÔ¼öµé
 	virtual void Update() = 0;
 	virtual void Draw(HDC hdc) = 0;
 
@@ -21,19 +20,22 @@ public:
 
 	virtual bool IsDelete() = 0;
 
-	// ìƒì†ë°›ëŠ” í´ëž˜ìŠ¤ì—ì„œ ì˜¤ë²„ë¼ì´ë”© í•  í•„ìš”ê°€ ì—†ëŠ” í•¨ìˆ˜ë“¤	
+	bool IsCollide(const CGameObject &subject) const { return m_boundary->IsCollide(*subject.GetBoundary()); }
+	//virtual void SolveCollision(const CGameObject &subject) = 0;
+
+	// »ó¼Ó¹Þ´Â Å¬·¡½º¿¡¼­ ¿À¹ö¶óÀÌµù ÇÒ ÇÊ¿ä°¡ ¾ø´Â ÇÔ¼öµé	
 	CState* GetState() const { return m_curState; }
 	Vector2d GetPosition() const { return m_position;}
-
-	void ChangeSprite(AnimationState state) { m_renderer->ChangeState(state); }
+	Collidable* GetBoundary() const { return m_boundary; }
 
 protected:
-	CSprite * m_renderer;
+	bool IsInScreen() const { return m_boundary->IsInScreen(); }
 
 	Vector2d m_position;
-
-	Collide pos;
+	
+	Collidable *m_boundary;
 
 	CState *m_curState;
 	queue<CState*> m_stateQueue;
 };
+
