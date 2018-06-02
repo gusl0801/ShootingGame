@@ -106,6 +106,12 @@
     <ClCompile Include="CEnemy.cpp">
       <Filter>2.Object\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="CRushEnemy.cpp">
+      <Filter>2.Object\Enemy\RushEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="CSimpleShooter.cpp">
+      <Filter>2.Object\Enemy\RushEnemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -224,6 +230,15 @@
     </ClInclude>
     <ClInclude Include="CEnemy.h">
       <Filter>2.Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Calculator.h">
+      <Filter>3.Fundamental\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="CSimpleShooter.h">
+      <Filter>2.Object\Enemy\RushEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="CRushEnemy.h">
+      <Filter>2.Object\Enemy\RushEnemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -354,6 +369,12 @@
     </Filter>
     <Filter Include="2.Object\Enemy">
       <UniqueIdentifier>{d107f375-db74-49e4-92d8-d3273368ffd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.Fundamental\Calculator">
+      <UniqueIdentifier>{9c57e73e-c70f-4b42-89fc-e2f933d1c6ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Enemy\RushEnemy">
+      <UniqueIdentifier>{7fc4db6e-d6a0-416c-bcb7-5ae4acfb0654}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
