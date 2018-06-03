@@ -20,6 +20,8 @@ CPlayer::CPlayer()
 	m_image.Load(TEXT("resource/characters/ship_1.png"));
 
 	counter.SetLimit(CCounter::SecondToFrame(0.5));
+
+	shape = 2;
 }
 
 
@@ -29,7 +31,7 @@ CPlayer::~CPlayer()
 
 void CPlayer::Update()
 {
-	counter.Increase();
+	/*counter.Increase();
 	if (counter.isLimit())
 	{
 		if (isRight) shape += 1;
@@ -38,7 +40,7 @@ void CPlayer::Update()
 		if (shape <= 0) isRight = true;
 
 		counter.ResetCount();
-	}
+	}*/
 }
 
 void CPlayer::Draw(HDC hdc)

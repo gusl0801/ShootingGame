@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Calculator.h" />
     <ClInclude Include="CAnimator.h" />
     <ClInclude Include="CBackground.h" />
     <ClInclude Include="CBoundingBox.h" />
@@ -166,6 +167,8 @@
     <ClInclude Include="CIOManager.h" />
     <ClInclude Include="Collidable.h" />
     <ClInclude Include="CRapidBullet.h" />
+    <ClInclude Include="CRushEnemy.h" />
+    <ClInclude Include="CSimpleShooter.h" />
     <ClInclude Include="CTraceBullet.h" />
     <ClInclude Include="CNWayBullet.h" />
     <ClInclude Include="CObjectManager.h" />
@@ -207,6 +210,8 @@
     <ClCompile Include="CIOManager.cpp" />
     <ClCompile Include="Collidable.cpp" />
     <ClCompile Include="CRapidBullet.cpp" />
+    <ClCompile Include="CRushEnemy.cpp" />
+    <ClCompile Include="CSimpleShooter.cpp" />
     <ClCompile Include="CTraceBullet.cpp" />
     <ClCompile Include="CNWayBullet.cpp" />
     <ClCompile Include="CObjectManager.cpp" />

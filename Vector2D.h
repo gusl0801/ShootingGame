@@ -2,6 +2,8 @@
 #include "stdafx.h"
 
 #define POW2(value) value * value
+#define ADD(value, addNum, limit) min(value + addNum, limit)
+#define SUB(value, subNum,limit) max(value - subNum, limit)
 
 template <class Ty>
 class Vector2D

@@ -2,7 +2,8 @@
 #include "CTestScene.h"
 #include "CGameApp.h"
 #include "CPlayer.h"
-#include "CEnemy.h"
+#include "CSimpleShooter.h"
+
 #include "CBullet.h"
 #include "CNWayBullet.h"
 #include "CSplitBullet.h"
@@ -63,17 +64,6 @@ LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 
 	switch (message)
 	{
-	case WM_CREATE:
-		SetTimer(hWnd, 1, 2000, NULL);
-		break;
-	case WM_TIMER:
-		switch (wParam)
-		{
-		case 1:
-
-			break;
-		}
-		break;
 	case WM_KEYDOWN:
 		if (wParam == VK_SPACE)
 			m_bullets.AddObject(new CBullet());
@@ -102,11 +92,8 @@ LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 			m_bullets.AddObject(new CExtensionBullet(pos, 50, 10));
 		}
 		else if (wParam == 'q' || wParam == 'Q') {
-			m_enemys.AddObject(new CEnemy());
+			m_enemys.AddObject(new CSimpleShooter());
 		}
-		break;
-	case WM_DESTROY:
-		KillTimer(hWnd, 1);
 		break;
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);

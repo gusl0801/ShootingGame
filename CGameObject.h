@@ -3,6 +3,7 @@
 #include "Vector2D.h"
 #include "CCounter.h"
 #include "Collidable.h"
+#include "CSprite.h"
 
 class CState;
 
@@ -28,6 +29,7 @@ public:
 	Vector2d GetPosition() const { return m_position;}
 	Collidable* GetBoundary() const { return m_boundary; }
 
+	void SpriteUpdate(int variation, bool yUpdate) { m_sprite->Add(variation); }
 protected:
 	bool IsInScreen() const { return m_boundary->IsInScreen(); }
 
@@ -37,5 +39,7 @@ protected:
 
 	CState *m_curState;
 	queue<CState*> m_stateQueue;
+
+	CSprite * m_sprite;
 };
 

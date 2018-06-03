@@ -3,21 +3,15 @@
 #include "CObjectManager.h"
 #include "CBullet.h"
 
-#define ENEMY_SPEED 5
+#define ENEMY_SPEED CSpeed::PixelPerSecond(CLIENT_WIDTH, 5);
 
 class CEnemy : public CGameObject
 {
 public:
-	CEnemy();
-	~CEnemy();
+	virtual ~CEnemy();
 
-	virtual void Update();
-	virtual void Draw(HDC hdc);
-	virtual void ProcessCommand() {}
-
-	virtual bool IsDelete() { return false; }
-
-	void Test(int x, int y) { m_position.x += x; m_position.y += y; }
+protected:
+	void SimpleMove() { m_position += m_direction * ENEMY_SPEED; }
 
 private:
 	int m_width;
@@ -29,9 +23,5 @@ private:
 	int shape = 0;
 	bool isRight = true;
 	CCounter counter;
-
-protected:
-	void SimpleMove();
-	void Attack();
 };
 
