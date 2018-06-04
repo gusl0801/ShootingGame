@@ -9,7 +9,6 @@ public:
 
 	virtual void Update();
 	virtual void Draw(HDC hdc);
-	virtual void ProcessCommand() {}
 
 	virtual bool IsDelete() { return false; }
 
@@ -22,12 +21,11 @@ private:
 	
 	int m_width;
 	int m_height;
-	int m_direction;
 
 	CImage m_image;
 
-	int shape = 0;
-	bool isRight = true;
+	int m_shape = 2;
+	bool m_isRight = true;
 	CCounter spriteCounter;
 	CCounter attackCounter;
 

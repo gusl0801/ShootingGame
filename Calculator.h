@@ -1,10 +1,9 @@
 #pragma once
-
 #define FPS 80.0f
 
-#define SECONDE_TO_FRAME(s) s * FPS
-#define MINUTE_TO_FRAME(m)  m * FPS * FPS
-#define HOUR_TO_FRAME(h)    h * FPS * FPS * FPS
+#define SECONDE_TO_FRAME(s) (double)(s * FPS)
+#define MINUTE_TO_FRAME(m)  (double)(m * FPS * FPS)
+#define HOUR_TO_FRAME(h)    (double)(h * FPS * FPS * FPS)
 
 #define FRAME_TO_SECOND(f) f * (1 / FPS)
 #define FRAME_TO_MINUTE(f) f * (1 / FPS / FPS)
@@ -31,7 +30,7 @@ private:
 	CSpeed() {}
 
 public:
-	static double PixelPerSecond(double second, double pixel) { return pixel / SECONDE_TO_FRAME(second); }
+	static double PixelPerSecond(double second, double pixel)  { return pixel / SECONDE_TO_FRAME(second); }
 	static double PixelPerMinute(double minute, double pixel)  { return pixel / MINUTE_TO_FRAME(minute); }
 
  	static double MillimeterPerSecond(double second, double mm) { return MM_TO_PIXEL(mm) / SECONDE_TO_FRAME(second); }

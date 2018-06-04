@@ -8,9 +8,6 @@ CPlayer::CPlayer()
 {
 	m_position.x = CLIENT_WIDTH * 0.42f;
 	m_position.y = CLIENT_HEIGHT * 0.45f;
-	
-	//m_width = width;
-	//m_height = height;
 
 	Vector2d leftTop = m_position;
 	Vector2d rightBot = { m_position.x + m_width, m_position.y + m_height };
@@ -21,7 +18,7 @@ CPlayer::CPlayer()
 
 	counter.SetLimit(CCounter::SecondToFrame(0.5));
 
-	shape = 2;
+	m_shape = 2;
 }
 
 
@@ -31,19 +28,20 @@ CPlayer::~CPlayer()
 
 void CPlayer::Update()
 {
-	/*counter.Increase();
-	if (counter.isLimit())
-	{
-		if (isRight) shape += 1;
-		else shape -= 1;
-		if (shape >= 4) isRight = false;
-		if (shape <= 0) isRight = true;
-
-		counter.ResetCount();
-	}*/
+	
 }
 
 void CPlayer::Draw(HDC hdc)
 {
-	m_image.TransparentBlt(hdc, m_position.x, m_position.y, 52, 60, shape * 26, 0, 26, 30, RGB(255, 0, 255));
+	m_image.TransparentBlt(hdc, m_position.x, m_position.y, 52, 60, m_shape * 26, 0, 26, 30, RGB(255, 0, 255));
+}
+
+void CPlayer::Move(const Point2D & direction)
+{
+	m_position.x += direction.x;
+	m_position.y += direction.y;
+}
+
+void CPlayer::Attack()
+{
 }

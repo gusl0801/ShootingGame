@@ -36,6 +36,7 @@ public:
 	void AlphaBlend(HDC hdc, const Point2D& position, DrawFunc drawFn);
 	void AlphaBlend(HDC hdc, const Point2D& position) {}
 
+
 private:
 	int m_segement;			  // 몇 개의 영역으로 나누어지는지, 0 ~ n
 	int m_imagePosition;	  // 이미지 상에서 출력할 위치
