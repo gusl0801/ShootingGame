@@ -1,5 +1,7 @@
 #pragma once
 #include "CGameObject.h"
+#include "CObjectManager.h"
+
 class CPlayer :
 	public CGameObject
 {
@@ -9,11 +11,11 @@ public:
 
 	virtual void Update();
 	virtual void Draw(HDC hdc);
-	virtual void ProcessCommand() {}
 
 	virtual bool IsDelete() { return false; }
 
-	void Test(int x, int y) { m_position.x += x; m_position.y += y; }
+	void Move(const Point2D &direction);
+	void Attack();
 
 private:
 	int m_width;
@@ -21,8 +23,10 @@ private:
 
 	CImage m_image;
 
-	int shape = 0;
-	bool isRight = true;
+	int m_shape = 0;
+	bool m_isRight = true;
 	CCounter counter;
+
+	CObjectManager m_bullets;
 };
 

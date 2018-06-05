@@ -5,6 +5,12 @@
 #include "Collidable.h"
 #include "CSprite.h"
 
+
+#define DIR_LEFT  Point2D {-1, 0 }
+#define DIR_RIGHT Point2D { 1, 0 }
+#define DIR_UP    Point2D { 0,-1 }
+#define DIR_DOWN  Point2D { 0, 1 }
+
 class CState;
 
 class CGameObject
@@ -17,13 +23,10 @@ public:
 	virtual void Update() = 0;
 	virtual void Draw(HDC hdc) = 0;
 
-	virtual void ProcessCommand() = 0;
-
 	virtual bool IsDelete() = 0;
 
 	bool IsCollide(const CGameObject &subject) const { return m_boundary->IsCollide(*subject.GetBoundary()); }
-	//virtual void SolveCollision(const CGameObject &subject) = 0;
-
+	
 	// 상속받는 클래스에서 오버라이딩 할 필요가 없는 함수들	
 	CState* GetState() const { return m_curState; }
 	Vector2d GetPosition() const { return m_position;}

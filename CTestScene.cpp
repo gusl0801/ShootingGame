@@ -49,10 +49,11 @@ void CTestScene::Draw(HDC hdc)
 
 void CTestScene::ProcessInput()
 {	
-	if (IS_KEY_DOWN(VK_LEFT))  { m_player->Test(-1,0);}
-	if (IS_KEY_DOWN(VK_RIGHT)) { m_player->Test(1,0); }
-	if (IS_KEY_DOWN(VK_UP))    { m_player->Test(0,-1);}
-	if (IS_KEY_DOWN(VK_DOWN))  { m_player->Test(0,1); }
+	if (IS_KEY_DOWN(VK_LEFT))  { m_player->Move(DIR_LEFT);}
+	if (IS_KEY_DOWN(VK_RIGHT)) { m_player->Move(DIR_RIGHT); }
+	if (IS_KEY_DOWN(VK_UP))    { m_player->Move(DIR_UP);}
+	if (IS_KEY_DOWN(VK_DOWN))  { m_player->Move(DIR_DOWN); }
+	if (IS_KEY_DOWN(VK_SPACE)) { m_player->Attack(); }
 }
 
 LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

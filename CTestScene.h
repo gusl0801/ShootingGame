@@ -29,6 +29,5 @@ private:
 
 	CObjectManager m_bullets;
 	CObjectManager m_enemys;
-
 };
 

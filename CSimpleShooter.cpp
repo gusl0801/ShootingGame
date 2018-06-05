@@ -8,10 +8,6 @@ CSimpleShooter::CSimpleShooter()
 {
 	m_position.x = rand() % CLIENT_WIDTH;
 	m_position.y = 20;
-	m_direction = rand() % 2;
-
-	//m_width = width;
-	//m_height = height;
 
 	Vector2d leftTop = m_position;
 	Vector2d rightBot = { m_position.x + m_width, m_position.y + m_height };
@@ -22,6 +18,8 @@ CSimpleShooter::CSimpleShooter()
 
 	attackCounter.SetLimit(CCounter::SecondToFrame(0.5));
 	spriteCounter.SetLimit(CCounter::SecondToFrame(0.5));
+
+	m_direction = { 0, 1 };
 }
 
 
@@ -31,7 +29,7 @@ CSimpleShooter::~CSimpleShooter()
 
 void CSimpleShooter::Update()
 {
-	Move();
+	SimpleMove();
 	
 	SpriteUpdate();
 	AttackUpdate();
@@ -41,23 +39,14 @@ void CSimpleShooter::Update()
 
 void CSimpleShooter::Draw(HDC hdc)
 {
-	m_image.TransparentBlt(hdc, m_position.x, m_position.y, 52, 60, shape * 26, 0, 26, 30, RGB(255, 0, 255));
+	m_image.TransparentBlt(hdc, m_position.x, m_position.y, 52, 60, m_shape * 26, 0, 26, 30, RGB(255, 0, 255));
 
 	m_bullets.Draw(hdc);
 }
 
 void CSimpleShooter::SpriteUpdate()
 {
-	spriteCounter.Increase();
-	if (spriteCounter.isLimit())
-	{
-		if (isRight) shape += 1;
-		else shape -= 1;
-		if (shape >= 4) isRight = false;
-		if (shape <= 0) isRight = true;
-
-		spriteCounter.ResetCount();
-	}
+	
 }
 
 void CSimpleShooter::AttackUpdate()
@@ -73,16 +62,7 @@ void CSimpleShooter::AttackUpdate()
 
 void CSimpleShooter::Move()
 {
-	if (m_direction == 1) {
-		m_position.x += ENEMY_SPEED;
-		if (m_position.x >= CLIENT_WIDTH - 50)
-			m_direction = 0;
-	}
-	else {
-		m_position.x -= ENEMY_SPEED;
-		if (m_position.x <= 0)
-			m_direction = 1;
-	}
+	m_position += m_direction * ENEMY_SPEED;
 }
 
 void CSimpleShooter::Attack()

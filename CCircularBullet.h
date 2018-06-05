@@ -10,10 +10,7 @@ public:
 
 	virtual void Update();
 	virtual void Draw(HDC hdc);
-
-	virtual void ProcessCommand() {}
-
-	virtual bool IsDelete() { return false; }// m_position.y > CLIENT_HEIGHT;}
+	virtual bool IsDelete() { return false; }
 
 private:
 	static const int ANGLE_INC_VALUE;
