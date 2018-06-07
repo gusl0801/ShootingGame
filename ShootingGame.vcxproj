@@ -187,6 +187,7 @@
     <ClInclude Include="CTestScene.h" />
     <ClInclude Include="CTimer.h" />
     <ClInclude Include="CTitleScene.h" />
+    <ClInclude Include="CTraceEnemy.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Singleton.h" />
@@ -237,6 +238,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="CTraceEnemy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ShootingGame.rc" />

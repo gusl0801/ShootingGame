@@ -112,6 +112,9 @@
     <ClCompile Include="CSimpleShooter.cpp">
       <Filter>2.Object\Enemy\RushEnemy</Filter>
     </ClCompile>
+    <ClCompile Include="CTraceEnemy.cpp">
+      <Filter>2.Object\Enemy\TraceEnemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -239,6 +242,9 @@
     </ClInclude>
     <ClInclude Include="CRushEnemy.h">
       <Filter>2.Object\Enemy\RushEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="CTraceEnemy.h">
+      <Filter>2.Object\Enemy\TraceEnemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -375,6 +381,9 @@
     </Filter>
     <Filter Include="2.Object\Enemy\RushEnemy">
       <UniqueIdentifier>{7fc4db6e-d6a0-416c-bcb7-5ae4acfb0654}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Object\Enemy\TraceEnemy">
+      <UniqueIdentifier>{5033cda4-e059-4b6c-b17b-4ace9e1c43cc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
