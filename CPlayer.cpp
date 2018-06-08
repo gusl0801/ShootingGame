@@ -3,6 +3,8 @@
 
 #include "CBoundingBox.h"
 
+#define PLAYER_SPEED CSpeed::PixelPerSecond(2, CLIENT_WIDTH);
+
 CPlayer::CPlayer()
 	:CGameObject()
 {
@@ -38,8 +40,8 @@ void CPlayer::Draw(HDC hdc)
 
 void CPlayer::Move(const Point2D & direction)
 {
-	m_position.x += direction.x;
-	m_position.y += direction.y;
+	m_position.x += direction.x*PLAYER_SPEED;
+	m_position.y += direction.y*PLAYER_SPEED;
 }
 
 void CPlayer::Attack()

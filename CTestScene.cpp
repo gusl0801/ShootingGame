@@ -3,6 +3,7 @@
 #include "CGameApp.h"
 #include "CPlayer.h"
 #include "CSimpleShooter.h"
+#include "CTraceEnemy.h"
 
 #include "CBullet.h"
 #include "CNWayBullet.h"
@@ -92,8 +93,11 @@ LRESULT CTestScene::ProcessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 		else if (wParam == 'e' || wParam == 'E') {
 			m_bullets.AddObject(new CExtensionBullet(pos, 50, 10));
 		}
-		else if (wParam == 'q' || wParam == 'Q') {
+		else if (wParam == 'u' || wParam == 'U') {
 			m_enemys.AddObject(new CSimpleShooter());
+		}
+		else if (wParam == 'i' || wParam == 'I') {
+			m_enemys.AddObject(new CTraceEnemy(m_player));
 		}
 		break;
 	default:
