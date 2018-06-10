@@ -5,7 +5,6 @@ class CTraceEnemy :
 	public CEnemy
 {
 public:
-	CTraceEnemy();
 	CTraceEnemy(CGameObject *target);
 	~CTraceEnemy();
 
@@ -15,11 +14,10 @@ public:
 	virtual bool IsDelete() { return false; }
 
 private:
-	void Move();
+	void Trace();
 	void Attack();
 
-	void TraceTarget();
-
+	void TraceUpdate();
 	void SpriteUpdate();
 	void AttackUpdate();
 

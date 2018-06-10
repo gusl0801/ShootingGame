@@ -4,25 +4,6 @@
 #include "CBoundingBox.h"
 #include "CNWayBullet.h"
 
-CTraceEnemy::CTraceEnemy()
-{
-	m_position.x = rand() % CLIENT_WIDTH;
-	m_position.y = 20;
-
-	Vector2d leftTop = m_position;
-	Vector2d rightBot = { m_position.x + m_width, m_position.y + m_height };
-
-	m_boundary = new CBoundingBox(leftTop, rightBot);
-
-	m_image.Load(TEXT("resource/characters/enemy_1.png"));
-
-	m_traceCounter.SetLimit(CCounter::SecondToFrame(0.0f));
-	attackCounter.SetLimit(CCounter::SecondToFrame(0.5));
-	spriteCounter.SetLimit(CCounter::SecondToFrame(0.5));
-
-	m_direction = { 0, 1 };
-}
-
 CTraceEnemy::CTraceEnemy(CGameObject *target)
 {
 	m_target = target;
@@ -48,7 +29,7 @@ CTraceEnemy::~CTraceEnemy()
 
 void CTraceEnemy::Update()
 {
-	Move();
+	TraceUpdate();
 	SimpleMove();
 
 	SpriteUpdate();
@@ -80,13 +61,13 @@ void CTraceEnemy::AttackUpdate()
 	}
 }
 
-void CTraceEnemy::Move()
+void CTraceEnemy::TraceUpdate()
 {
 	m_traceCounter.Increase();
 
 	if (m_traceCounter.isLimit()) {
 		m_traceCounter.ResetCount();
-		TraceTarget();
+		Trace();
 	}
 }
 
@@ -95,7 +76,7 @@ void CTraceEnemy::Attack()
 	m_bullets.AddObject(new CBullet(m_position));
 }
 
-void CTraceEnemy::TraceTarget()
+void CTraceEnemy::Trace()
 {
 	Vector2d pos = m_target->GetPosition();
 
